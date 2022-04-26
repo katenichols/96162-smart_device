@@ -4,11 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Описание проекта">
+  <meta name="description" content="Личный проект «Smart Device», HTML Academy">
   <title>Smart Device</title>
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" />
+  <link rel="preload" href="fonts/PTMono-Regular.woff" as="font" />
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" />
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff" as="font" />
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" />
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff" as="font" />
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-<h1>Smart Device</h1>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <picture class="header__picture">
+            <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg" />
+            <img src="img/svg/logo-desktop.svg" alt="Умные технологии Smart Device" class="header__logo" width="215" height="55">
+          </picture>
+          <div class="header__contacts">
+            <a href="mailto:info@sd.ru">
+              <span>info@sd.ru</span>
+            </a>
+            <a href="tel:84950005252">
+              <span>+7 (495) 000 52 52</span>
+            </a>
+          </div>
+          <a href="popup.html" target="_blank">Заказать звонок</a>
+        </div>
+
+      </div>
+    </header>
+    <main></main>
+    <footer class="footer"></footer>
+  </div>
 </body>
+
 </html>
