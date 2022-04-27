@@ -796,19 +796,20 @@ ul {
 }
 
 .header__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 215px 1fr 204px;
+  grid-template-columns: 215px 1fr 204px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
 .header__wrapper a {
-  padding: 10px 15px;
+  display: block;
+  margin-top: -5px;
+  margin-right: 43px;
+  padding: 10px 16px 13px 17px;
   font-family: "Roboto Condensed Bold", "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -819,6 +820,18 @@ ul {
   color: #f2f5f6;
   border: 1px solid #f2f5f6;
   border-radius: 3px;
+}
+
+.header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .header__contacts a {
@@ -846,7 +859,9 @@ ul {
 }
 
 .header__contacts a:first-of-type {
-  margin-right: 120px;
+  margin-right: 122px;
+  margin-bottom: 15px;
+  margin-left: 40px;
 }
 
 .header__contacts a:first-of-type::before {
@@ -903,20 +918,29 @@ ul {
     padding: 20px 0 25px;
   }
 
+  .header__wrapper {
+    -ms-grid-columns: 215px 1fr;
+    grid-template-columns: 215px 1fr;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
   .header__wrapper a {
     display: none;
   }
 
   .header__contacts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
 
   .header__contacts a {
     display: block;
     width: 0;
     height: 20px;
+    margin: 0;
     padding: 0 0 0 50px;
     overflow: hidden;
     color: rgba(255, 255, 255, 0);
@@ -924,6 +948,8 @@ ul {
 
   .header__contacts a:first-of-type {
     margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
     padding-left: 60px;
   }
 }
@@ -950,9 +976,18 @@ ul {
     padding: 15px 0 20px;
   }
 
+  .header__wrapper {
+    -ms-grid-columns: 35px 1fr;
+    grid-template-columns: 35px 1fr;
+  }
+
   .header__logo {
     width: 35px;
     height: 35px;
+  }
+
+  .header__contacts {
+    margin-top: 5px;
   }
 
   .header__contacts a:last-of-type {

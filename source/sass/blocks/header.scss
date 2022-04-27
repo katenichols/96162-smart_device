@@ -15,9 +15,18 @@
 }
 
 .header__wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 215px 1fr 204px;
   align-items: center;
+
+  @media (max-width: $vp-1023) {
+    grid-template-columns: 215px 1fr;
+    align-items: flex-start;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: 35px 1fr;
+  }
 }
 
 .header__logo {
@@ -28,7 +37,10 @@
 }
 
 .header__wrapper a {
-  padding: 10px 15px;
+  display: block;
+  margin-top: -5px;
+  margin-right: 43px;
+  padding: 10px 16px 13px 17px;
 
   @include roboto-bold($size-14, $line-16);
   text-transform: uppercase;
@@ -44,8 +56,17 @@
 }
 
 .header__contacts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+
   @media (max-width: $vp-1023) {
-    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: 5px;
   }
 }
 
@@ -74,7 +95,9 @@
   }
 
   &:first-of-type {
-    margin-right: 120px;
+    margin-right: 122px;
+    margin-bottom: 15px;
+    margin-left: 40px;
 
     &::before {
       background-image: url("../img/sprite/icon-mail.svg");
@@ -91,14 +114,16 @@
     display: block;
     width: 0;
     height: 20px;
+    margin: 0;
     padding: 0 0 0 50px;
-    // align-self: center;
     overflow: hidden;
 
     color: $color-transparent;
 
     &:first-of-type {
       margin-right: 0;
+      margin-bottom: 0;
+      margin-left: 0;
       padding-left: 60px;
     }
   }
