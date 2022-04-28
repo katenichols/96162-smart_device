@@ -1,5 +1,280 @@
 .footer {
   width: 100%;
+  padding: 50px 0 49px;
 
   background-color: #041827;
+
+  @media (max-width: $vp-1023) {
+    padding-bottom: 53px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 35px 0;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: $vp-767) {
+    flex-direction: column;
+  }
+}
+
+.footer__nav,
+.footer__contacts {
+  padding-top: 7px;
+
+  @media (max-width: $vp-767) {
+    position: relative;
+
+    width: 100%;
+    padding: 22px 0 15px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -25px;
+
+      width: calc(100% + 50px);
+      height: 1px;
+
+      background-color: $color-alice-blue-fade;
+    }
+  }
+}
+
+.footer__social {
+  flex: none;
+  margin-right: 160px;
+
+  @media (max-width: $vp-1023) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $vp-767) {
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-bottom: 23px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -25px;
+
+      width: calc(100% + 50px);
+      height: 1px;
+
+      background-color: $color-alice-blue-fade;
+    }
+  }
+}
+
+.footer__nav {
+  min-width: 500px;
+
+  @media (max-width: $vp-1520) {
+    width: auto;
+    min-width: auto;
+  }
+
+  @media (max-width: $vp-1023) {
+    width: 377px;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 35px;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-left: -5px;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__social-list {
+  display: flex;
+  margin-left: 15px;
+
+  @media (max-width: $vp-767) {
+    margin-left: 4px;
+  }
+}
+
+.footer__social-item {
+  margin-right: 25px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.footer h4 {
+  margin-top: 0;
+  margin-bottom: 23px;
+
+  @include roboto($size-15, $line-16);
+  color: $color-default-white;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @media (max-width: $vp-767) {
+    position: relative;
+
+    width: 100%;
+    margin-bottom: 18px;
+
+    &:first-of-type {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.is-close {
+      margin-bottom: 8px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -3px;
+        right: 1px;
+
+        width: 15px;
+        height: 15px;
+
+        background-image: url("../img/sprite/icon-plus.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &.is-open {
+      margin-bottom: 18px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        right: 2px;
+
+        width: 15px;
+        height: 15px;
+
+        background-image: url("../img/sprite/icon-minus.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 136px;
+
+  @media (max-width: $vp-1520) {
+    height: auto;
+  }
+
+  @media (max-width: $vp-767) {
+    &.is-close {
+      display: none;
+    }
+
+    &.is-open {
+      display: flex;
+    }
+  }
+}
+
+.footer__nav-item,
+.footer__nav a {
+  @include ptmono($size-16, $line-135);
+  color: $color-default-white-fade;
+}
+
+.footer__nav-item {
+  width: 220px;
+  margin-bottom: 9px;
+
+  &:nth-of-type(3) {
+    margin-bottom: 6px;
+  }
+
+  &:nth-of-type(4) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $vp-1023) {
+    &:nth-of-type(4) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.footer__contacts-list {
+  @media (max-width: $vp-767) {
+    &.is-close {
+      display: none;
+    }
+
+    &.is-open {
+      display: block;
+    }
+  }
+}
+
+.footer__contacts-item {
+  max-width: 345px;
+  margin-bottom: 5px;
+
+  @include ptmono($size-16, $line-22);
+  color: $color-default-white-fade;
+
+  &--address {
+    margin-bottom: 6px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    line-height: 135%;
+
+    &--address {
+      margin-bottom: 17px;
+    }
+  }
+}
+
+.footer__contacts a {
+  @include ptmono($size-16, $line-25);
+  color: $color-default-white-fade;
+
+  @media (max-width: $vp-767) {
+    font-size: 14px;
+    line-height: 25px;
+  }
 }

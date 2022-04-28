@@ -1,5 +1,12 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {onFooterTitleClick} from './modules/on-footer-title-click';
+
+export const footerTitles = document.querySelectorAll('[data-footer-title]');
+export const footerNavList = document.querySelector('[data-nav-list]');
+export const footerContactsList = document.querySelector('[data-contacts-list]');
+
+export const arr = Array.from(footerTitles);
 
 // ---------------------------------
 
@@ -12,11 +19,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  arr.forEach((item) => {
+    item.classList.add('is-close');
+  });
+  footerNavList.classList.add('is-close');
+  footerContactsList.classList.add('is-close');
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+
+    for (let i = 0; i < arr.length; i++) {
+      arr[i].addEventListener('click', () => {
+        onFooterTitleClick(arr[i]);
+      });
+    }
   });
 });
 
