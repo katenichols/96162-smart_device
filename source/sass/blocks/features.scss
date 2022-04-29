@@ -1,0 +1,31 @@
+.features {
+  padding-top: 120px;
+
+  background-color: $color-alice-blue-bg;
+
+  @media (max-width: $vp-1023) {
+    padding-top: 80px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 50px;
+  }
+}
+
+.features__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-count: 2;
+  row-gap: 30px;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: $vp-767) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-count: 1;
+    row-gap: 0;
+    justify-content: center;
+  }
+}

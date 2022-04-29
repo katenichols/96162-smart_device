@@ -1,0 +1,125 @@
+.main-screen {
+  width: 100%;
+  padding: 304px 0 280px;
+
+  background-image: url("../img/main-screen-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main-screen-desktop@2x.jpg");
+  }
+
+  @media (max-width: $vp-1023) {
+    padding: 179px 0 205px;
+
+    background-image: url("../img/main-screen-tablet.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-screen-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 149px 0 190px;
+
+    background-image: url("../img/main-screen-mobile.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main-screen-mobile@2x.jpg");
+    }
+  }
+}
+
+.main-screen h1 {
+  margin: 0 0 32px 125px;
+
+  @include roboto-bold($size-80, $line-94);
+  color: $color-alice-blue;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  @media (max-width: $vp-1023) {
+    margin: 0 0 1px 0;
+
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin: 0 0 7px 0;
+
+    font-size: 36px;
+    line-height: 43px;
+  }
+}
+
+.main-screen p {
+  width: 685px;
+  margin: 0 0 47px 125px;
+
+  @include ptmono($size-22, $line-155);
+  color: $color-alice-blue;
+  text-transform: lowercase;
+
+  @media (max-width: $vp-1023) {
+    width: 100%;
+    margin: 0 0 57px 0;
+  }
+
+  @media (max-width: $vp-767) {
+    margin: 0 0 45px -1px;
+
+    font-size: 14px;
+    line-height: 155%;
+  }
+}
+
+.main-screen a {
+  display: block;
+  width: 410px;
+  margin-left: 125px;
+  padding: 15px 23px 19px 27px;
+
+  background-color: $color-deep-sky-blue;
+  border-radius: 3px;
+
+  @media (max-width: $vp-1023) {
+    margin-left: 45px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 100%;
+    max-width: 270px;
+    margin-left: 0;
+    padding: 13px 13px 12px 37px;
+  }
+}
+
+.main-screen a p {
+  margin: 0;
+
+  @include roboto-bold($size-18, $line-21);
+  color: $color-alice-blue;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @media (max-width: $vp-767) {
+    display: none;
+  }
+}
+
+.main-screen a span {
+  display: none;
+
+  @media (max-width: $vp-767) {
+    display: block;
+
+    @include roboto-bold($size-14, $line-16);
+    color: $color-alice-blue;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}
