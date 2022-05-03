@@ -1384,6 +1384,187 @@ ul {
   color: #ffffff;
 }
 
+.popup {
+  display: none;
+}
+
+.popup.is-open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: block;
+  width: 100%;
+}
+
+.popup__overlay {
+  width: 100%;
+  height: 200vh;
+  padding-top: 146px;
+  background-color: rgba(3, 16, 27, 0.7);
+}
+
+.popup form {
+  position: relative;
+  display: block;
+  width: 500px;
+  margin-left: calc(50% - 258px);
+  padding: 36px 40px 45px;
+  background-color: #00b2ff;
+  border-radius: 3px;
+}
+
+.popup__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../../img/sprite/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #00b2ff;
+  border: none;
+}
+
+.popup__close:hover {
+  cursor: pointer;
+}
+
+.popup h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: "Roboto Condensed Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.popup span {
+  display: block;
+  width: 380px;
+  margin-bottom: 38px;
+  font-family: "PT Mono Regular", "Courier New", "Courier", monospace;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.popup__form-input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.popup__form-input:nth-of-type(3) {
+  margin-bottom: 21px;
+}
+
+.popup__form-input:last-of-type {
+  margin-bottom: 0;
+}
+
+.popup input,
+.popup textarea {
+  width: 100%;
+  font-family: "PT Mono Regular", "Courier New", "Courier", monospace;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: rgba(4, 20, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+}
+
+.popup input::-webkit-input-placeholder,
+.popup textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.popup input::-moz-placeholder,
+.popup textarea::-moz-placeholder {
+  color: #ffffff;
+}
+
+.popup input:-ms-input-placeholder,
+.popup textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.popup input::-ms-input-placeholder,
+.popup textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.popup input::placeholder,
+.popup textarea::placeholder {
+  color: #ffffff;
+}
+
+.popup input {
+  padding: 13px 15px 15px;
+}
+
+.popup textarea {
+  min-height: 155px;
+  padding: 23px 15px;
+  resize: none;
+}
+
+.popup__submit {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 11px;
+  text-align: center;
+  font-family: "Roboto Condensed Bold", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: #041827;
+  border: none;
+  border-radius: 3px;
+}
+
+.popup__form-input--checkbox label {
+  position: relative;
+  display: block;
+  padding-left: 34px;
+  font-family: "PT Mono Regular", "Courier New", "Courier", monospace;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.popup__form-input--checkbox label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 9px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+}
+
+.popup__form-input--checkbox label.is-checked::before {
+  background-image: url("../../img/sprite/icon-checkbox-mark.svg");
+  background-repeat: no-repeat;
+  background-position: 1px 3px;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1669,6 +1850,17 @@ ul {
 
   .card:nth-of-type(2) span {
     width: 140px;
+  }
+
+  .popup__overlay {
+    padding: 100px 50px;
+  }
+
+  .popup form {
+    width: 100%;
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -2120,6 +2312,14 @@ ul {
 
   .card:nth-of-type(2) span {
     width: 130px;
+  }
+
+  .popup__overlay {
+    padding: 25px;
+  }
+
+  .popup span {
+    width: auto;
   }
 }
 
