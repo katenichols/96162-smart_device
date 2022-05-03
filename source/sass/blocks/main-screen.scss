@@ -5,6 +5,7 @@
   background-image: url("../img/main-screen-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-color: $color-black-pearl;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/main-screen-desktop@2x.jpg");

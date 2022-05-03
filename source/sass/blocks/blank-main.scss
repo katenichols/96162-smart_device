@@ -1,0 +1,21 @@
+.blank-main h1 {
+  padding-top: 180px;
+  padding-bottom: 30px;
+  text-align: center;
+
+  @include roboto-bold($size-80, $line-94);
+  color: $color-black-pearl;
+
+  @media (max-width: $vp-1023) {
+    padding-top: 100px;
+    padding-bottom: 30px;
+
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}

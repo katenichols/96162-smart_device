@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-card-mark" viewBox="0 0 5 10">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-card-mark-desktop" viewBox="0 0 5 10">
+<path d="M0.476196 8.80957L4.28572 5.00005L0.476196 1.19052" stroke="white" stroke-linejoin="round"/>
+</symbol><symbol id="icon-card-mark-mobile" viewBox="0 0 5 6">
+<path d="M1.31738 5.53979L3.85707 3.00011L1.31738 0.46043" stroke="white" stroke-linejoin="round"/>
+</symbol><symbol id="icon-card-mark" viewBox="0 0 5 10">
 <path d="M0.476074 8.80957L4.2856 5.00005L0.476074 1.19052" stroke="white" stroke-linejoin="round"/>
 </symbol><symbol id="icon-checkbox-mark" viewBox="0 0 9 6">
 <path d="M0.988525 2.33333L3.7778 5L7.96171 1" stroke="white"/>

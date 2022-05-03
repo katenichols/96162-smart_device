@@ -1,0 +1,157 @@
+.card {
+  display: block;
+  width: 28.69%;
+
+  @media (max-width: $vp-1023) {
+    width: 100%;
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.card a {
+  position: relative;
+
+  display: block;
+  height: 650px;
+  padding: 47px 40px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $color-cerulean;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-image: url("../../img/sprite/icon-card-mark-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $color-deep-sky-blue;
+    border-top-left-radius: 3px;
+  }
+
+  @media (max-width: $vp-1023) {
+    height: 250px;
+    padding: 37px 45px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 26px 30px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+
+      background-image: url("../../img/sprite/icon-card-mark-mobile.svg");
+    }
+  }
+}
+
+.card:first-of-type a {
+  background-image: url("../../img/card1-desktop.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/card1-desktop@2x.jpg");
+  }
+
+  @media (max-width: $vp-1023) {
+    background-image: url("../../img/card1-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card1-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url("../../img/card1-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card1-mobile@2x.jpg");
+    }
+  }
+}
+
+.card:nth-of-type(2) a {
+  background-image: url("../../img/card2-desktop.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/card2-desktop@2x.jpg");
+  }
+
+  @media (max-width: $vp-1023) {
+    background-image: url("../../img/card2-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card2-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url("../../img/card2-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card2-mobile@2x.jpg");
+    }
+  }
+}
+
+.card:last-of-type a {
+  background-image: url("../../img/card3-desktop.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/card3-desktop@2x.jpg");
+  }
+
+  @media (max-width: $vp-1023) {
+    background-image: url("../../img/card3-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card3-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url("../../img/card3-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card3-mobile@2x.jpg");
+    }
+  }
+}
+
+.card span {
+  display: block;
+  width: 151px;
+
+  @include roboto($size-20, $line-30);
+  color: $color-default-white;
+
+  @media (max-width: $vp-1023) {
+    width: 150px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.card:nth-of-type(2) span {
+  @media (max-width: $vp-1023) {
+    width: 140px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 130px;
+  }
+}
