@@ -805,6 +805,10 @@ ul {
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 }
 
+.header--nojs {
+  position: relative;
+}
+
 .header__wrapper {
   display: -ms-grid;
   display: grid;
@@ -1388,6 +1392,11 @@ ul {
   display: none;
 }
 
+.popup--nojs {
+  display: block;
+  margin-bottom: 40px;
+}
+
 .popup.is-open {
   position: absolute;
   top: 0;
@@ -1402,6 +1411,12 @@ ul {
   height: 200vh;
   padding-top: 146px;
   background-color: rgba(3, 16, 27, 0.7);
+}
+
+.popup__overlay--nojs {
+  height: auto;
+  padding-top: 40px;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .popup form {

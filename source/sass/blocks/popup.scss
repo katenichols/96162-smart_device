@@ -1,6 +1,11 @@
 .popup {
   display: none;
 
+  &--nojs {
+    display: block;
+    margin-bottom: 40px;
+  }
+
   &.is-open {
     position: absolute;
     top: 0;
@@ -18,6 +23,13 @@
   padding-top: 146px;
 
   background-color: $color-overlay;
+
+  &--nojs {
+    height: auto;
+    padding-top: 40px;
+
+    background-color: $color-transparent;
+  }
 
   @media (max-width: $vp-1023) {
     padding: 100px 50px;

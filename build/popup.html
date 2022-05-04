@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Личный проект «Smart Device», HTML Academy">
+    <title>Smart Device</title>
+    <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" />
+    <link rel="preload" href="fonts/PTMono-Regular.woff" as="font" />
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" />
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff" as="font" />
+    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" />
+    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff" as="font" />
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header header--nojs">
+        <div class="container">
+          <div class="header__wrapper">
+            <picture class="header__picture">
+              <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg" />
+              <!-- 1x: 215px; 2x: 430px -->
+              <img src="img/svg/logo-desktop.svg" alt="Умные технологии Smart Device" class="header__logo" width="215" height="55">
+            </picture>
+            <div class="header__contacts">
+              <a href="mailto:info@sd.ru">
+                <span>info@sd.ru</span>
+              </a>
+              <a href="tel:84950005252">
+                <span>+7 (495) 000 52 52</span>
+              </a>
+            </div>
+            <a href="popup.html" target="_blank" data-header-link>Заказать звонок</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="popup popup--nojs" data-popup>
+          <div class="popup__overlay popup__overlay--nojs">
+            <form>
+              <button type="button" class="popup__close" aria-label="Закрыть попап" data-close-popup></button>
+              <h4>Закажите звонок</h4>
+              <span>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</span>
+              <div class="popup__form-input">
+                <label for="name" class="visually-hidden"></label>
+                <input type="text" id="name" name="name" placeholder="Имя" required>
+              </div>
+              <div class="popup__form-input">
+                <label for="phone" class="visually-hidden"></label>
+                <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+              </div>
+              <div class="popup__form-input">
+                <label for="question" class="visually-hidden"></label>
+                <textarea id="question" name="question" placeholder="Ваш вопрос"></textarea>
+              </div>
+              <button type="submit" class="popup__submit">Отправить</button>
+              <div class="popup__form-input popup__form-input--checkbox">
+                <input type="checkbox" class="visually-hidden" id="assent" name="assent" required>
+                <label for="assent" class="is-checked">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container container--footer">
+          <section class="footer__social">
+            <h4 class="visually-hidden">Логотип и соцсети</h4>
+            <!-- 1x: 215px; 2x: 430px -->
+            <img src="img/svg/logo-desktop.svg" alt="Умные технологии Smart Device" class="footer__logo" width="215" height="55">
+            <ul class="footer__social-list">
+              <li class="footer__social-item">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+                </svg>
+              </li>
+              <li class="footer__social-item">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
+                </svg>
+              </li>
+              <li class="footer__social-item">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+                </svg>
+              </li>
+            </ul>
+          </section>
+          <div class="footer__wrapper">
+            <section class="footer__nav">
+              <h4 data-footer-title>Разделы сайта</h4>
+              <ul class="footer__nav-list" data-nav-list>
+                <li class="footer__nav-item">
+                  <a href="blank.html" target="_blank">О Компании</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="blank.html" target="_blank">Продукты</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="blank.html" target="_blank">Производство печатных плат</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="blank.html" target="_blank">Монтаж печатных плат</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="blank.html" target="_blank">Комплектующие</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="blank.html" target="_blank">Доставка</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="blank.html" target="_blank">Контакты</a>
+                </li>
+              </ul>
+            </section>
+            <section class="footer__contacts">
+              <h4 data-footer-title>Наш офис</h4>
+              <ul class="footer__contacts-list" data-contacts-list>
+                <li class="footer__contacts-item footer__contacts-item--address">г. Мытищи, Олимпийский проспект, д.10</li>
+                <li class="footer__contacts-item">
+                  <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+                </li>
+                <li class="footer__contacts-item">
+                  <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

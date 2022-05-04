@@ -2,16 +2,17 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {onFooterTitleClick} from './modules/on-footer-title-click';
 import {onAboutCompanyButtonClick} from './modules/on-about-company-button-click';
+import './modules/header-link';
 
 export const footerTitles = document.querySelectorAll('[data-footer-title]');
 export const footerNavList = document.querySelector('[data-nav-list]');
 export const footerContactsList = document.querySelector('[data-contacts-list]');
-export const headerLink = document.querySelector('[data-header-link]');
 export const aboutCompanyWrapper = document.querySelector('[data-about-company-wrapper]');
 export const aboutCompanyButton = document.querySelector('[data-about-company-button]');
 export const aboutCompanyInnerSpan = document.querySelector('[data-about-company-inner-span]');
 
 export const arrFooterTitles = Array.from(footerTitles);
+export const lastFocus = document.activeElement;
 
 // ---------------------------------
 
@@ -24,10 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-  headerLink.addEventListener('click', (evt) => {
-    evt.preventDefault();
-  });
-
   arrFooterTitles.forEach((item) => {
     item.classList.add('is-close');
   });
