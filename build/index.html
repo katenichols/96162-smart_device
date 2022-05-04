@@ -123,6 +123,38 @@
           </ul>
         </div>
       </section>
+
+      <section class="feedback">
+        <div class="container">
+          <div class="feedback__wrapper">
+            <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
+            <span>Мы&nbsp;проконсультируем Вас бесплатно.</span>
+            <form>
+              <div class="feedback__inner-wrapper">
+                <div class="feedback__form-input">
+                  <label for="feedback-name" class="visually-hidden"></label>
+                  <input type="text" id="feedback-name" name="feedback-name" placeholder="Имя" required>
+                </div>
+                <div class="feedback__form-input">
+                  <label for="feedback-phone" class="visually-hidden"></label>
+                  <input type="tel" id="feedback-phone" name="feedback-phone" placeholder="Телефон" required>
+                </div>
+              </div>
+              <div class="feedback__form-input">
+                <label for="feedback-question" class="visually-hidden"></label>
+                <textarea id="feedback-question" name="feedback-question" placeholder="Ваш вопрос"></textarea>
+              </div>
+              <div class="feedback__inner-wrapper">
+                <button type="submit" class="feedback__submit">Задать вопрос</button>
+                <div class="feedback__form-input feedback__form-input--checkbox">
+                  <input type="checkbox" class="visually-hidden" id="feedback-assent" name="feedback-assent" required>
+                  <label for="feedback-assent" class="is-checked">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
