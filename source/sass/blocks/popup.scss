@@ -132,6 +132,11 @@
 
 .popup input {
   padding: 13px 15px 15px;
+
+  &:focus {
+    box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+    border-radius: 2px;
+  }
 }
 
 .popup textarea {
@@ -155,6 +160,10 @@
   background-color: $color-black-pearl;
   border: none;
   border-radius: 3px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .popup__form-input--checkbox label {
@@ -179,11 +188,22 @@
     border-radius: 2px;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &.is-checked {
     &::before {
       background-image: url("../../img/sprite/icon-checkbox-mark.svg");
       background-repeat: no-repeat;
       background-position: 1px 3px;
+      border: 1px solid $color-default-white;
+    }
+  }
+
+  &.error {
+    &::before {
+      border: 1px solid $color-torch-red;
     }
   }
 }

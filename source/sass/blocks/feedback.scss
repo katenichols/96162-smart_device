@@ -175,6 +175,11 @@
 
 .feedback input {
   padding: 13px 15px 15px;
+
+  &:focus {
+    box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+    border-radius: 2px;
+  }
 }
 
 .feedback textarea {
@@ -211,6 +216,10 @@
   border: none;
   border-radius: 3px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   @media (max-width: $vp-767) {
     width: 100%;
     margin-bottom: 15px;
@@ -239,11 +248,23 @@
     border-radius: 2px;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &.is-checked {
     &::before {
       background-image: url("../../img/sprite/icon-checkbox-mark.svg");
       background-repeat: no-repeat;
       background-position: 1px 3px;
+    }
+  }
+
+  &.error {
+    &::before {
+      // border: 1px solid $color-torch-red;
+      box-shadow: 0 0 0 2px #ff1553, 0 0 0 3px #ffffff;
+  border-radius: 2px;
     }
   }
 
@@ -259,4 +280,9 @@
       left: 5px;
     }
   }
+}
+
+.feedback__form-input--checkbox input:focus+label {
+  box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  border-radius: 2px;
 }

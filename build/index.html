@@ -17,7 +17,7 @@
 
 <body data-body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header" data-header>
       <div class="container">
         <div class="header__wrapper">
           <picture class="header__picture">
@@ -43,7 +43,7 @@
         <div class="container">
           <h1>Печатные платы</h1>
           <p>Производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-          <a href="#form-feedback">
+          <a href="#feedback" data-main-screen-link>
             <p>Получить бесплатную консультацию</p>
             <span>Бесплатная консультация</span>
           </a>
@@ -124,31 +124,31 @@
         </div>
       </section>
 
-      <section class="feedback">
+      <section class="feedback" id="feedback">
         <div class="container">
           <div class="feedback__wrapper">
             <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
             <span>Мы&nbsp;проконсультируем Вас бесплатно.</span>
-            <form>
+            <form action="https://echo.htmlacademy.ru/courses" method="post" autocomplete="off" target="_blank" data-form>
               <div class="feedback__inner-wrapper">
                 <div class="feedback__form-input">
                   <label for="feedback-name" class="visually-hidden"></label>
-                  <input type="text" id="feedback-name" name="feedback-name" placeholder="Имя" required>
+                  <input type="text" id="feedback-name" name="name" placeholder="Имя" required data-name>
                 </div>
                 <div class="feedback__form-input">
                   <label for="feedback-phone" class="visually-hidden"></label>
-                  <input type="tel" id="feedback-phone" name="feedback-phone" placeholder="Телефон" required>
+                  <input type="tel" id="feedback-phone" name="phone" placeholder="Телефон" required data-phone>
                 </div>
               </div>
               <div class="feedback__form-input">
                 <label for="feedback-question" class="visually-hidden"></label>
-                <textarea id="feedback-question" name="feedback-question" placeholder="Ваш вопрос"></textarea>
+                <textarea id="feedback-question" name="question" placeholder="Ваш вопрос" data-textarea></textarea>
               </div>
               <div class="feedback__inner-wrapper">
-                <button type="submit" class="feedback__submit">Задать вопрос</button>
-                <div class="feedback__form-input feedback__form-input--checkbox">
-                  <input type="checkbox" class="visually-hidden" id="feedback-assent" name="feedback-assent" required>
-                  <label for="feedback-assent" class="is-checked">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+                <button type="submit" class="feedback__submit" data-submit>Задать вопрос</button>
+                <div class="feedback__form-input feedback__form-input--checkbox" data-checkbox-group>
+                  <input type="checkbox" class="visually-hidden" id="assent" name="assent" tabindex="0" required checked data-checkbox-input>
+                  <label class="is-checked" for="feedback-assent" data-checkbox-label>Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
                 </div>
               </div>
             </form>
@@ -165,19 +165,25 @@
           <img src="img/svg/logo-desktop.svg" alt="Умные технологии Smart Device" class="footer__logo" width="215" height="55">
           <ul class="footer__social-list">
             <li class="footer__social-item">
-              <svg width="30" height="30">
-                <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
-              </svg>
+              <a href="https://facebook.com">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+                </svg>
+              </a>
             </li>
             <li class="footer__social-item">
-              <svg width="30" height="30">
-                <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
-              </svg>
+              <a href="https://ok.ru">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
+                </svg>
+              </a>
             </li>
             <li class="footer__social-item">
-              <svg width="30" height="30">
-                <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
-              </svg>
+              <a href="https://vk.com">
+                <svg width="30" height="30">
+                  <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </section>
@@ -230,32 +236,33 @@
 
   <section class="popup" data-popup>
     <div class="popup__overlay" data-popup-overlay>
-      <form data-form>
-        <button type="button" class="popup__close" aria-label="Закрыть попап" data-close-popup></button>
+      <form action="https://echo.htmlacademy.ru/courses" method="post" autocomplete="off" target="_blank" data-form>
+        <button type="button" class="popup__close" aria-label="Закрыть попап" tabindex="0" data-close-popup></button>
         <h4>Закажите звонок</h4>
         <span>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</span>
         <div class="popup__form-input">
           <label for="name" class="visually-hidden"></label>
-          <input type="text" id="name" name="name" placeholder="Имя" required>
+          <input type="text" id="name" name="name" placeholder="Имя" tabindex="0" required data-name>
         </div>
         <div class="popup__form-input">
           <label for="phone" class="visually-hidden"></label>
-          <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+          <input type="tel" id="phone" name="phone" placeholder="Телефон" tabindex="0" required data-phone>
         </div>
         <div class="popup__form-input">
           <label for="question" class="visually-hidden"></label>
-          <textarea id="question" name="question" placeholder="Ваш вопрос"></textarea>
+          <textarea id="question" name="question" placeholder="Ваш вопрос" tabindex="0" data-textarea></textarea>
         </div>
-        <button type="submit" class="popup__submit">Отправить</button>
-        <div class="popup__form-input popup__form-input--checkbox">
-          <input type="checkbox" class="visually-hidden" id="assent" name="assent" required>
-          <label for="assent" class="is-checked">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+        <button type="submit" class="popup__submit" data-submit>Отправить</button>
+        <div class="popup__form-input popup__form-input--checkbox" data-checkbox-group>
+          <input type="checkbox" class="visually-hidden" id="assent" name="assent" tabindex="-1" required checked data-checkbox-input>
+          <label class="is-checked" for="assent" tabindex="0" data-checkbox-label>Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
         </div>
       </form>
     </div>
   </section>
 
   <object type="image/svg+xml" class="visually-hidden" data="img/sprite_auto.svg"></object>
+  <script src="js/vendor/imask.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 

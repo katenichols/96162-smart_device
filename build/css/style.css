@@ -914,6 +914,14 @@ ul {
   margin-right: 160px;
 }
 
+.footer__social a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+}
+
 .footer__nav {
   min-width: 500px;
 }
@@ -1526,6 +1534,12 @@ ul {
   padding: 13px 15px 15px;
 }
 
+.popup input:focus {
+  -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  border-radius: 2px;
+}
+
 .popup textarea {
   min-height: 155px;
   padding: 23px 15px;
@@ -1551,6 +1565,10 @@ ul {
   border-radius: 3px;
 }
 
+.popup__submit:hover {
+  cursor: pointer;
+}
+
 .popup__form-input--checkbox label {
   position: relative;
   display: block;
@@ -1574,10 +1592,19 @@ ul {
   border-radius: 2px;
 }
 
+.popup__form-input--checkbox label:hover {
+  cursor: pointer;
+}
+
 .popup__form-input--checkbox label.is-checked::before {
   background-image: url("../../img/sprite/icon-checkbox-mark.svg");
   background-repeat: no-repeat;
   background-position: 1px 3px;
+  border: 1px solid #ffffff;
+}
+
+.popup__form-input--checkbox label.error::before {
+  border: 1px solid #ff1553;
 }
 
 .feedback {
@@ -1702,6 +1729,12 @@ ul {
   padding: 13px 15px 15px;
 }
 
+.feedback input:focus {
+  -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  border-radius: 2px;
+}
+
 .feedback textarea {
   min-height: 155px;
   margin-bottom: 31px;
@@ -1728,6 +1761,10 @@ ul {
   border-radius: 3px;
 }
 
+.feedback__submit:hover {
+  cursor: pointer;
+}
+
 .feedback__form-input--checkbox label {
   position: relative;
   display: block;
@@ -1751,10 +1788,26 @@ ul {
   border-radius: 2px;
 }
 
+.feedback__form-input--checkbox label:hover {
+  cursor: pointer;
+}
+
 .feedback__form-input--checkbox label.is-checked::before {
   background-image: url("../../img/sprite/icon-checkbox-mark.svg");
   background-repeat: no-repeat;
   background-position: 1px 3px;
+}
+
+.feedback__form-input--checkbox label.error::before {
+  -webkit-box-shadow: 0 0 0 2px #ff1553, 0 0 0 3px #ffffff;
+  box-shadow: 0 0 0 2px #ff1553, 0 0 0 3px #ffffff;
+  border-radius: 2px;
+}
+
+.feedback__form-input--checkbox input:focus + label {
+  -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
+  border-radius: 2px;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
