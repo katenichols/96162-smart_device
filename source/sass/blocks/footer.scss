@@ -64,7 +64,7 @@
     position: relative;
     flex-direction: column;
     margin-bottom: 0;
-    padding-bottom: 23px;
+    padding-bottom: 30px;
 
     &::after {
       content: "";
@@ -119,7 +119,12 @@
   display: flex;
   margin-left: 15px;
 
+  @media (max-width: $vp-1023) {
+    margin-top: -5px;
+  }
+
   @media (max-width: $vp-767) {
+    margin-top: -1px;
     margin-left: 4px;
   }
 }

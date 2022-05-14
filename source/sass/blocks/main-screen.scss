@@ -1,6 +1,7 @@
 .main-screen {
   width: 100%;
-  padding: 304px 0 280px;
+  margin-top: -20px;
+  padding: 204px 0 280px;
 
   background-image: url("../img/main-screen-desktop.jpg");
   background-repeat: no-repeat;
@@ -12,7 +13,7 @@
   }
 
   @media (max-width: $vp-1023) {
-    padding: 179px 0 205px;
+    padding: 99px 0 205px;
 
     background-image: url("../img/main-screen-tablet.jpg");
     background-size: cover;
@@ -23,7 +24,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 149px 0 190px;
+    padding: 99px 0 190px;
 
     background-image: url("../img/main-screen-mobile.jpg");
     background-size: cover;

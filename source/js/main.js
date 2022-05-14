@@ -8,7 +8,6 @@ import './modules/anchors';
 import './modules/validation-forms';
 import {popupOverlay} from './modules/header-link';
 import {formValidity} from './modules/validation-forms';
-// import {formValidity} from './modules/validation-forms';
 
 export const footerTitles = document.querySelectorAll('[data-footer-title]');
 export const footerNavList = document.querySelector('[data-nav-list]');
@@ -18,8 +17,6 @@ export const aboutCompanyButton = document.querySelector('[data-about-company-bu
 export const aboutCompanyInnerSpan = document.querySelector('[data-about-company-inner-span]');
 export const arrFooterTitles = Array.from(footerTitles);
 export const lastFocus = document.activeElement;
-
-const forms = document.querySelectorAll('[data-form]');
 
 // ---------------------------------
 
@@ -64,16 +61,12 @@ window.addEventListener('DOMContentLoaded', () => {
       }
 
       if (evt.target.type === 'submit') {
-        evt.preventDefault();
-        formValidity(evt.target);
+        if (formValidity(evt.target)) {
+          evt.preventDefault();
+          closePopup();
+        }
       }
     });
-
-    // for (let i = 0; i < forms.length; i++) {
-    //   forms[i].addEventListener('submit', () => {
-    //     formValidity(forms[i]);
-    //   });
-    // }
   });
 });
 

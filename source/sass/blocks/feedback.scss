@@ -13,11 +13,15 @@
     left: 350px;
     z-index: 1;
 
-    width: 510px;
-    height: 285px;
+    width: 26.5%;
+    max-width: 510px;
+    max-height: 285px;
+    height: 55.9%;
 
     background-image: url('../../img/plane.png');
     background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 center;
   }
 
   @include vp-1839 {

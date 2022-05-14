@@ -5,7 +5,7 @@ const maskOptions = {mask: '+{7}(000)000-00-00'};
 const nameInputs = document.querySelectorAll('[data-name]');
 const phoneInputs = document.querySelectorAll('[data-phone]');
 const checkboxLabels = document.querySelectorAll('[data-checkbox-label]');
-export const checkboxInputs = document.querySelectorAll('[data-checkbox-input]');
+const checkboxInputs = document.querySelectorAll('[data-checkbox-input]');
 
 for (let z = 0; z < nameInputs.length; z++) {
   nameInputs[z].addEventListener('input', () => {
@@ -31,6 +31,7 @@ export const checkNameInput = (nameInput) => {
     outlineIfNotError(nameInput);
     return;
   }
+
   nameInput.reportValidity();
 };
 
