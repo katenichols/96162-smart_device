@@ -18,7 +18,7 @@
     max-height: 285px;
     height: 55.9%;
 
-    background-image: url('../../img/plane.png');
+    background-image: url("../../img/plane.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 center;
@@ -268,7 +268,7 @@
     &::before {
       // border: 1px solid $color-torch-red;
       box-shadow: 0 0 0 2px #ff1553, 0 0 0 3px #ffffff;
-  border-radius: 2px;
+      border-radius: 2px;
     }
   }
 
@@ -286,7 +286,7 @@
   }
 }
 
-.feedback__form-input--checkbox input:focus+label {
+.feedback__form-input--checkbox input:focus + label {
   box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
   border-radius: 2px;
 }
