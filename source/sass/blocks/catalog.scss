@@ -1,5 +1,5 @@
 .catalog {
-  padding: 65px 0 140px;
+  padding: 65px 0 90px;
 
   background-color: $color-black-pearl;
 
@@ -43,7 +43,9 @@
 
 .catalog__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-center;
+  flex-wrap: wrap;
+  gap: 6.9%;
   width: 100%;
 
   @media (max-width: $vp-1023) {

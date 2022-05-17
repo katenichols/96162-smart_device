@@ -8,7 +8,7 @@ export const popup = document.querySelector('[data-popup]');
 export const focusables = popup.querySelectorAll('[data-close-popup], [data-name], [data-phone], [data-textarea], [data-submit], [data-checkbox-label]');
 export const popupOverlay = popup.querySelector('[data-popup-overlay]');
 export const firstFocusable = focusables[0];
-const header = document.querySelector('[data-header]');
+export const header = document.querySelector('[data-header]');
 const closePopupButton = popup.querySelector('[data-close-popup]');
 const lastFocusable = focusables[focusables.length - 1];
 
@@ -40,12 +40,14 @@ const focusTrap = (evt) => {
 const openPopup = () => {
   body.style.position = 'fixed';
   body.style.top = '0';
-  body.style.padding = '0 calc(20px - (100vw - 100%)) 0 0';
-  header.style.paddingRight = 'calc(20px - (100vw - 100%))';
   popup.classList.add('is-open');
   focusables[1].focus();
   outlineIfNotError(focusables[1]);
   outlineIfNotError(focusables[2]);
+
+  if (navigator.userAgent.includes('Chrome') ) {
+    body.style.padding = '0 calc(19px - (100vw - 100%)) 0 0';
+  }
 };
 
 closePopupButton.addEventListener('click', () => {

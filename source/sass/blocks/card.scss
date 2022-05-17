@@ -1,6 +1,7 @@
 .card {
   display: block;
   width: 28.69%;
+  margin-bottom: 50px;
 
   @media (max-width: $vp-1023) {
     width: 100%;
@@ -19,10 +20,15 @@
   height: 650px;
   padding: 47px 40px;
 
+  background-image: url("../../img/card1-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: $color-cerulean;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/card1-desktop@2x.jpg");
+  }
 
   &::before {
     content: "";
@@ -43,10 +49,22 @@
   @media (max-width: $vp-1023) {
     height: 250px;
     padding: 37px 45px;
+
+    background-image: url("../../img/card1-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card1-tablet@2x.jpg");
+    }
   }
 
   @media (max-width: $vp-767) {
     padding: 26px 30px;
+
+    background-image: url("../../img/card1-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/card1-mobile@2x.jpg");
+    }
 
     &::before {
       width: 40px;
@@ -57,31 +75,7 @@
   }
 }
 
-.card:first-of-type a {
-  background-image: url("../../img/card1-desktop.jpg");
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../img/card1-desktop@2x.jpg");
-  }
-
-  @media (max-width: $vp-1023) {
-    background-image: url("../../img/card1-tablet.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/card1-tablet@2x.jpg");
-    }
-  }
-
-  @media (max-width: $vp-767) {
-    background-image: url("../../img/card1-mobile.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/card1-mobile@2x.jpg");
-    }
-  }
-}
-
-.card:nth-of-type(2) a {
+.card:nth-of-type(2n) a {
   background-image: url("../../img/card2-desktop.jpg");
 
   @media (min-resolution: 2dppx) {
@@ -105,7 +99,7 @@
   }
 }
 
-.card:last-of-type a {
+.card:nth-of-type(3n) a {
   background-image: url("../../img/card3-desktop.jpg");
 
   @media (min-resolution: 2dppx) {

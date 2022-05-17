@@ -1,4 +1,3 @@
-// import {navLinks} from './header-modal';
 const mainScreenLink = document.querySelector('[data-main-screen-link]');
 
 mainScreenLink.addEventListener('click', (evt) => {

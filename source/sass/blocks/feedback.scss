@@ -266,7 +266,6 @@
 
   &.error {
     &::before {
-      // border: 1px solid $color-torch-red;
       box-shadow: 0 0 0 2px #ff1553, 0 0 0 3px #ffffff;
       border-radius: 2px;
     }
@@ -280,7 +279,7 @@
     padding-left: 31px;
 
     &::before {
-      top: 6px;
+      top: 0;
       left: 5px;
     }
   }

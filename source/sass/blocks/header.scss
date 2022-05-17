@@ -1,6 +1,6 @@
 .header {
   position: sticky;
-  z-index: 5;
+  z-index: 15;
   top: 0;
   left: 0;
 
@@ -22,21 +22,6 @@
   }
 }
 
-.header__wrapper {
-  display: grid;
-  grid-template-columns: 215px 1fr 220px;
-  align-items: center;
-
-  @media (max-width: $vp-1023) {
-    grid-template-columns: 215px 1fr;
-    align-items: flex-start;
-  }
-
-  @media (max-width: $vp-767) {
-    grid-template-columns: 35px 1fr;
-  }
-}
-
 .header__logo {
   @media (max-width: $vp-767) {
     width: 35px;
@@ -44,11 +29,10 @@
   }
 }
 
-.header__wrapper a {
+.container--header a {
   display: block;
   width: 160px;
   margin-top: -5px;
-  // margin-right: 60px;
   padding: 10px 15px 13px 17px;
 
   @include roboto-bold($size-14, $line-16);
@@ -109,7 +93,6 @@
   &:first-of-type {
     margin-right: 44px;
     margin-bottom: 15px;
-    // margin-left: 40px;
 
     &::before {
       background-image: url("../img/sprite/icon-mail.svg");

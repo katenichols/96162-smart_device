@@ -26,6 +26,21 @@
   }
 }
 
+.container--header {
+  display: grid;
+  grid-template-columns: 215px 1fr 220px;
+  align-items: center;
+
+  @media (max-width: $vp-1023) {
+    grid-template-columns: 215px 1fr;
+    align-items: flex-start;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: 35px 1fr;
+  }
+}
+
 .container--footer {
   display: flex;
   justify-content: space-between;
