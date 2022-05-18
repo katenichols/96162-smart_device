@@ -65,7 +65,9 @@ document.addEventListener('keydown', (evt) => {
   focusTrap(evt);
 });
 
-headerLink.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  openPopup();
-});
+if (headerLink) {
+  headerLink.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    openPopup();
+  });
+}

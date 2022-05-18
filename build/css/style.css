@@ -1860,6 +1860,12 @@ ul {
   }
 }
 
+@media (max-width: 1058px) {
+  .header__contacts a:first-of-type {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     padding: 0 50px;
@@ -1906,7 +1912,6 @@ ul {
   }
 
   .header__contacts a:first-of-type {
-    margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
     padding-left: 60px;

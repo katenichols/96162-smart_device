@@ -105,6 +105,12 @@
     }
   }
 
+  @media (max-width: $vp-1058) {
+    &:first-of-type {
+      margin-right: 0;
+    }
+  }
+
   @media (max-width: $vp-1023) {
     display: block;
     width: 0;
@@ -116,7 +122,6 @@
     color: $color-transparent;
 
     &:first-of-type {
-      margin-right: 0;
       margin-bottom: 0;
       margin-left: 0;
       padding-left: 60px;
