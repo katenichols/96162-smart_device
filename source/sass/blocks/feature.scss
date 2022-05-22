@@ -19,11 +19,11 @@
     padding-top: 89px;
     padding-bottom: 31px;
 
-    &:nth-of-type(3) {
+    &:nth-of-type(3n) {
       padding-top: 88px;
     }
 
-    &:last-of-type {
+    &:nth-of-type(4n) {
       padding-top: 85px;
     }
 
@@ -38,12 +38,12 @@
     margin-bottom: 30px;
     padding: 75px 30px 35px 25px;
 
-    &:nth-of-type(3) {
+    &:nth-of-type(3n) {
       min-height: 325px;
       padding-top: 78px;
     }
 
-    &:last-of-type {
+    &:nth-of-type(4n) {
       min-height: 325px;
       margin-bottom: 0;
       padding-top: 78px;
@@ -56,14 +56,16 @@
   }
 }
 
-.feature:nth-of-type(3):hover {
+.feature:nth-of-type(3n):hover {
   @media (max-width: $vp-767) {
     padding-top: 80px;
   }
 }
 
-.feature:last-of-type:hover {
-  padding-top: 85px;
+.feature:nth-of-type(4n):hover {
+  @media (max-width: $vp-1023) {
+    padding-top: 85px;
+  }
 
   @media (max-width: $vp-767) {
     padding-top: 80px;
@@ -82,12 +84,13 @@
   &::before {
     content: "";
     position: absolute;
-    top: -58px;
-    left: -2px;
+    top: -59px;
+    left: -4px;
 
     width: 40px;
     height: 40px;
 
+    background-image: url("../img/sprite/icon-watch.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -103,10 +106,16 @@
   @media (max-width: $vp-767) {
     font-size: 20px;
     line-height: 140%;
+
+    &::before {
+      top: -51px;
+
+      background-image: url("../img/sprite/icon-watch-mobile.svg");
+    }
   }
 }
 
-.feature:nth-of-type(3) h3 {
+.feature:nth-of-type(3n) h3 {
   @media (max-width: $vp-1023) {
     margin-bottom: 7px;
   }
@@ -116,7 +125,7 @@
   }
 }
 
-.feature:nth-of-type(3):hover h3 {
+.feature:nth-of-type(3n):hover h3 {
   @media (max-width: $vp-1023) {
     margin-bottom: 5px;
   }
@@ -126,7 +135,7 @@
   }
 }
 
-.feature:last-of-type h3 {
+.feature:nth-of-type(4n) h3 {
   @media (max-width: $vp-1023) {
     margin-bottom: 5px;
   }
@@ -136,7 +145,7 @@
   }
 }
 
-.feature:last-of-type:hover h3 {
+.feature:nth-of-type(4n):hover h3 {
   @media (max-width: $vp-1023) {
     margin-bottom: 6px;
   }
@@ -158,17 +167,15 @@
 
 .feature:hover h3::before {
   left: -3px;
-}
 
-.feature:first-of-type h3::before {
-  background-image: url("../img/sprite/icon-watch.svg");
+  background-image: url("../img/sprite/icon-watch-hover.svg");
 
   @media (max-width: $vp-767) {
-    background-image: url("../img/sprite/icon-watch-mobile.svg");
+    background-image: url("../img/sprite/icon-watch-mobile-hover.svg");
   }
 }
 
-.feature:nth-of-type(2) h3::before {
+.feature:nth-of-type(2n) h3::before {
   background-image: url("../img/sprite/icon-hired.svg");
 
   @media (max-width: $vp-767) {
@@ -176,7 +183,7 @@
   }
 }
 
-.feature:nth-of-type(3) h3::before {
+.feature:nth-of-type(3n) h3::before {
   left: -10px;
 
   background-image: url("../img/sprite/icon-detective.svg");
@@ -186,11 +193,12 @@
   }
 
   @media (max-width: $vp-767) {
+    top: -54px;
     background-image: url("../img/sprite/icon-detective-mobile.svg");
   }
 }
 
-.feature:last-of-type h3::before {
+.feature:nth-of-type(4n) h3::before {
   background-image: url("../img/sprite/icon-tag.svg");
 
   @media (max-width: $vp-1023) {
@@ -205,15 +213,7 @@
   }
 }
 
-.feature:first-of-type:hover h3::before {
-  background-image: url("../img/sprite/icon-watch-hover.svg");
-
-  @media (max-width: $vp-767) {
-    background-image: url("../img/sprite/icon-watch-mobile-hover.svg");
-  }
-}
-
-.feature:nth-of-type(2):hover h3::before {
+.feature:nth-of-type(2n):hover h3::before {
   background-image: url("../img/sprite/icon-hired-hover.svg");
 
   @media (max-width: $vp-767) {
@@ -221,7 +221,7 @@
   }
 }
 
-.feature:nth-of-type(3):hover h3::before {
+.feature:nth-of-type(3n):hover h3::before {
   left: -10px;
 
   background-image: url("../img/sprite/icon-detective-hover.svg");
@@ -237,7 +237,7 @@
   }
 }
 
-.feature:last-of-type:hover h3::before {
+.feature:nth-of-type(4n):hover h3::before {
   background-image: url("../img/sprite/icon-tag-hover.svg");
 
   @media (max-width: $vp-767) {

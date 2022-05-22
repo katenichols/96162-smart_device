@@ -11,7 +11,7 @@
 
   @media (max-width: $vp-767) {
     padding-top: 46px;
-    padding-bottom: 80px;
+    padding-bottom: 79px;
   }
 }
 
@@ -84,17 +84,9 @@
   @include ptmono($size-16, $line-22);
   color: $color-black-pearl;
 
-  &:last-of-type {
-    margin-bottom: 40px;
-  }
-
   @media (max-width: $vp-1023) {
-    &:nth-of-type(2) {
+    &:nth-of-type(2n) {
       line-height: 21.5px;
-    }
-
-    &:last-of-type {
-      margin-bottom: 18px;
     }
   }
 
@@ -104,17 +96,13 @@
     font-size: 14px;
     line-height: 19.2px;
 
-    &:nth-of-type(2) {
+    &:nth-of-type(2n) {
       line-height: 19.6px;
-    }
-
-    &:last-of-type {
-      margin-bottom: 13px;
     }
   }
 }
 
-.about-company p:nth-of-type(2) span {
+.about-company span {
   @media (max-width: $vp-767) {
     &.is-close {
       display: none;
@@ -128,6 +116,7 @@
 }
 
 .about-company__button {
+  margin-top: 20px;
   padding: 14px 50px 14px 49px;
 
   @include roboto-bold($size-14, $line-16);
@@ -147,23 +136,27 @@
     cursor: pointer;
   }
 
+  @media (max-width: $vp-1023) {
+    margin-top: -2px;
+  }
+
   @media (max-width: $vp-767) {
     padding: 8px 39px 10px 40px;
   }
 }
 
-.about-company__button.is-close span:first-of-type {
+.about-company__button.is-close span {
   display: block;
 }
 
-.about-company__button.is-close span:last-of-type {
+.about-company__button.is-close span:nth-of-type(2n) {
   display: none;
 }
 
-.about-company__button.is-open span:first-of-type {
+.about-company__button.is-open span {
   display: none;
 }
 
-.about-company__button.is-open span:last-of-type {
+.about-company__button.is-open span:nth-of-type(2n) {
   display: block;
 }

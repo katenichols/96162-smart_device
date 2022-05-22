@@ -1,5 +1,5 @@
 import {lastFocus} from '../main';
-import {onEscKeydown, focusTrap, body, popup, header} from './header-link';
+import {onEscKeydown, focusTrap, body, popup} from './header-link';
 
 const closePopup = () => {
 

@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  padding: 50px 0 49px;
+  padding: 50px 0 47px;
 
   background-color: #041827;
 
@@ -111,7 +111,7 @@
 
   @media (max-width: $vp-767) {
     margin-left: -5px;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 }
 
@@ -132,7 +132,7 @@
 .footer__social-item {
   margin-right: 25px;
 
-  &:last-of-type {
+  &:nth-of-type(3n) {
     margin-right: 0;
   }
 }
@@ -150,10 +150,10 @@
     position: relative;
 
     width: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 0;
 
-    &:first-of-type {
-      margin-bottom: 0;
+    &:nth-of-type(2n) {
+      margin-bottom: 18px;
     }
 
     &:hover {
@@ -229,16 +229,16 @@
   width: 220px;
   margin-bottom: 9px;
 
-  &:nth-of-type(3) {
+  &:nth-of-type(3n) {
     margin-bottom: 6px;
   }
 
-  &:nth-of-type(4) {
+  &:nth-of-type(4n) {
     margin-bottom: 0;
   }
 
   @media (max-width: $vp-1023) {
-    &:nth-of-type(4) {
+    &:nth-of-type(4n) {
       margin-bottom: 8px;
     }
   }
@@ -267,7 +267,7 @@
     margin-bottom: 6px;
   }
 
-  &:last-of-type {
+  &:nth-of-type(4n) {
     margin-bottom: 0;
   }
 

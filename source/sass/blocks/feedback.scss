@@ -53,7 +53,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 46px 0 50px;
+    padding: 46px 0 69px;
   }
 }
 
@@ -118,10 +118,6 @@
   width: 100%;
   margin-bottom: 20px;
 
-  &:last-of-type {
-    justify-content: space-between;
-  }
-
   @media (max-width: $vp-767) {
     flex-direction: column;
     justify-content: flex-start;
@@ -131,23 +127,22 @@
 .feedback__inner-wrapper .feedback__form-input {
   width: calc(50% - 15px);
 
-  &:first-of-type {
-    margin-right: 30px;
+  &:nth-of-type(2n) {
+    margin-left: 30px;
   }
 
   @media (max-width: $vp-767) {
     width: 100%;
 
-    &:first-of-type {
-      margin-right: 0;
-      margin-bottom: 20px;
+    &:nth-of-type(2n) {
+      margin-top: 20px;
+      margin-left: 0;
     }
   }
 }
 
-.feedback__inner-wrapper:last-of-type .feedback__form-input {
+.feedback__inner-wrapper:nth-of-type(2n) .feedback__form-input {
   width: 265px;
-  margin-right: 0;
   padding-top: 15px;
 
   @media (max-width: $vp-1023) {
@@ -230,10 +225,26 @@
   }
 }
 
-.feedback__form-input--checkbox label {
+.feedback__form-input-checkbox {
+  width: 265px;
+  margin-right: 0;
+  margin-left: auto;
+
+  @media (max-width: $vp-1023) {
+    margin-right: 55px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+.feedback__form-input-checkbox label {
   position: relative;
 
   display: block;
+  margin-top: 15px;
   padding-left: 26px;
 
   @include ptmono($size-14, $line-16);
@@ -272,6 +283,7 @@
   }
 
   @media (max-width: $vp-1023) {
+    margin-top: 10px;
     padding-left: 25px;
   }
 
@@ -279,13 +291,13 @@
     padding-left: 31px;
 
     &::before {
-      top: 0;
+      top: 7px;
       left: 5px;
     }
   }
 }
 
-.feedback__form-input--checkbox input:focus + label {
+.feedback__form-input-checkbox input:focus + label {
   box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
   border-radius: 2px;
 }

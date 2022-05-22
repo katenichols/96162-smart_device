@@ -45,7 +45,7 @@ const openPopup = () => {
   outlineIfNotError(focusables[1]);
   outlineIfNotError(focusables[2]);
 
-  if (navigator.userAgent.includes('Chrome') ) {
+  if (navigator.userAgent.includes('Chrome')) {
     body.style.padding = '0 calc(19px - (100vw - 100%)) 0 0';
   }
 };

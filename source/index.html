@@ -12,6 +12,7 @@
   <link rel="preload" href="fonts/RobotoCondensed-Bold.woff" as="font" />
   <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" />
   <link rel="preload" href="fonts/RobotoCondensed-Regular.woff" as="font" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -144,7 +145,7 @@
               </div>
               <div class="feedback__inner-wrapper">
                 <button type="submit" class="feedback__submit" data-submit>Задать вопрос</button>
-                <div class="feedback__form-input feedback__form-input--checkbox" data-checkbox-group>
+                <div class="feedback__form-input-checkbox" data-checkbox-group>
                   <input type="checkbox" class="visually-hidden" id="feedback-assent" name="assent" tabindex="0" required checked data-checkbox-input>
                   <label class="is-checked" for="feedback-assent" data-checkbox-label>Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
                 </div>
@@ -251,7 +252,7 @@
           <textarea id="question" name="question" placeholder="Ваш вопрос" tabindex="0" data-textarea></textarea>
         </div>
         <button type="submit" class="popup__submit" data-submit>Отправить</button>
-        <div class="popup__form-input popup__form-input--checkbox" data-checkbox-group>
+        <div class="popup__form-input-checkbox" data-checkbox-group>
           <input type="checkbox" class="visually-hidden" id="assent" name="assent" tabindex="-1" required checked data-checkbox-input>
           <label class="is-checked" for="assent" tabindex="0" data-checkbox-label>Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
         </div>

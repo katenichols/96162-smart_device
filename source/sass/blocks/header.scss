@@ -86,28 +86,23 @@
     width: 20px;
     height: 20px;
 
+    background-image: url("../img/sprite/icon-mail.svg");
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  &:first-of-type {
-    margin-right: 44px;
+  &:nth-of-type(2n) {
+    margin-left: 44px;
     margin-bottom: 15px;
 
-    &::before {
-      background-image: url("../img/sprite/icon-mail.svg");
-    }
-  }
-
-  &:last-of-type {
     &::before {
       background-image: url("../img/sprite/icon-phone.svg");
     }
   }
 
   @media (max-width: $vp-1058) {
-    &:first-of-type {
-      margin-right: 0;
+    &:nth-of-type(2n) {
+      margin-left: 0;
     }
   }
 
@@ -121,15 +116,15 @@
 
     color: $color-transparent;
 
-    &:first-of-type {
+    &:nth-of-type(2n) {
       margin-bottom: 0;
-      margin-left: 0;
-      padding-left: 60px;
+      margin-right: 0;
+      margin-left: 10px;
     }
   }
 
   @media (max-width: $vp-767) {
-    &:last-of-type {
+    &:nth-of-type(2n) {
       padding-left: 40px;
     }
   }
