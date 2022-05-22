@@ -2,7 +2,7 @@ import {escKey} from './../utils/esc-key';
 import {closePopup} from './close-popup';
 import {outlineIfNotError} from '../utils/error-outline';
 
-export const body = document.querySelector('[data-body]');
+export const body = document.querySelector('body');
 export const headerLink = document.querySelector('[data-header-link]');
 export const popup = document.querySelector('[data-popup]');
 export const focusables = popup.querySelectorAll('[data-close-popup], [data-name], [data-phone], [data-textarea], [data-submit], [data-checkbox-label]');
@@ -12,14 +12,14 @@ export const header = document.querySelector('[data-header]');
 const closePopupButton = popup.querySelector('[data-close-popup]');
 const lastFocusable = focusables[focusables.length - 1];
 
-const onEscKeydown = (evt) => {
+export const onEscKeydown = (evt) => {
   if (escKey(evt)) {
     closePopup();
     return;
   }
 };
 
-const focusTrap = (evt) => {
+export const focusTrap = (evt) => {
   if (popup.classList.contains('is-open')) {
     if (evt.key === 'Tab') {
       if (evt.shiftKey) {

@@ -13,19 +13,30 @@
 }
 
 .features__list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  column-count: 2;
-  row-gap: 30px;
-  justify-content: space-between;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // column-count: 2;
+  // row-gap: 30px;
+  // justify-content: space-between;
+  // width: 100%;
+
+  // @media (max-width: $vp-767) {
+  //   flex-direction: column;
+  //   flex-wrap: nowrap;
+  //   column-count: 1;
+  //   row-gap: 0;
+  //   justify-content: center;
+  // }
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
   width: 100%;
 
   @media (max-width: $vp-767) {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    column-count: 1;
-    row-gap: 0;
-    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }

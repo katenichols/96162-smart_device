@@ -1,50 +1,48 @@
 .feature {
-  width: 48.8%;
-  min-height: 300px;
-  padding: 95px 45px 35px 42px;
+  padding: 95px 45px 69px 42px;
 
   border: 1px solid $color-whisper;
   border-left: 5px solid $color-deep-sky-blue;
 
   &:hover {
-    padding-top: 95px;
+    padding-top: 97px;
+    padding-bottom: 70px;
 
     background-color: $color-deep-sky-blue;
     border: none;
   }
 
   @media (max-width: $vp-1023) {
-    width: 47.8%;
-    min-height: 360px;
     padding-top: 89px;
     padding-bottom: 31px;
 
-    &:nth-of-type(3n) {
+    &--third {
       padding-top: 88px;
     }
 
-    &:nth-of-type(4n) {
+    &--forth {
       padding-top: 85px;
     }
 
     &:hover {
       padding-top: 90px;
+      padding-bottom: 33px;
     }
   }
 
   @media (max-width: $vp-767) {
-    width: 100%;
-    min-height: 340px;
-    margin-bottom: 30px;
-    padding: 75px 30px 35px 25px;
+    min-height: 325px;
+    padding: 75px 30px 55px 25px;
 
-    &:nth-of-type(3n) {
-      min-height: 325px;
+    &--first {
+      padding-bottom: 73px;
+    }
+
+    &--third {
       padding-top: 78px;
     }
 
-    &:nth-of-type(4n) {
-      min-height: 325px;
+    &--forth {
       margin-bottom: 0;
       padding-top: 78px;
     }
@@ -56,13 +54,23 @@
   }
 }
 
-.feature:nth-of-type(3n):hover {
+.feature--first:hover {
+  padding-bottom: 75px;
+}
+
+.feature--second:hover {
+  @media (max-width: $vp-767) {
+    padding-bottom: 57px;
+  }
+}
+
+.feature--third:hover {
   @media (max-width: $vp-767) {
     padding-top: 80px;
   }
 }
 
-.feature:nth-of-type(4n):hover {
+.feature--forth:hover {
   @media (max-width: $vp-1023) {
     padding-top: 85px;
   }
