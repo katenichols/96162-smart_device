@@ -1,159 +1,199 @@
 .feature {
-  padding: 95px 45px 69px 42px;
+  padding: 40px 45px 69px 42px;
 
   border: 1px solid $color-whisper;
   border-left: 5px solid $color-deep-sky-blue;
 
+  &:nth-of-type(odd) {
+    padding-left: 40px;
+  }
+
   &:hover {
-    padding-top: 97px;
-    padding-bottom: 70px;
+    padding-top: 41px;
+    padding-left: 45px;
 
     background-color: $color-deep-sky-blue;
     border: none;
+
+    &:nth-of-type(even) {
+      padding-bottom: 71px;
+    }
   }
 
   @media (max-width: $vp-1023) {
-    padding-top: 89px;
-    padding-bottom: 31px;
-
-    &--third {
-      padding-top: 88px;
-    }
-
-    &--forth {
-      padding-top: 85px;
-    }
+    padding: 39px 40px 32px;
 
     &:hover {
-      padding-top: 90px;
-      padding-bottom: 33px;
+      &:nth-of-type(even) {
+        padding-bottom: 32px;
+      }
     }
   }
 
   @media (max-width: $vp-767) {
-    min-height: 325px;
-    padding: 75px 30px 55px 25px;
+    min-height: 340px;
+    padding: 29px 30px 29px 25px;
 
-    &--first {
-      padding-bottom: 73px;
-    }
-
-    &--third {
-      padding-top: 78px;
-    }
-
-    &--forth {
-      margin-bottom: 0;
-      padding-top: 78px;
-    }
-
-    &:hover {
-      padding-top: 76px;
+    &:nth-of-type(odd) {
       padding-left: 26px;
     }
+
+    &:nth-of-type(3n),
+    &:nth-of-type(4n) {
+      min-height: 325px;
+    }
+
+    &:hover {
+      padding-top: 31px;
+      padding-right: 31px;
+      padding-left: 30px;
+    }
   }
 }
 
-.feature--first:hover {
-  padding-bottom: 75px;
-}
+.feature__icon {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 20px;
 
-.feature--second:hover {
-  @media (max-width: $vp-767) {
-    padding-bottom: 57px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--timing {
+    margin-top: -1px;
+    background-image: url("../img/sprite/icon-watch.svg");
   }
-}
 
-.feature--third:hover {
-  @media (max-width: $vp-767) {
-    padding-top: 80px;
+  &--providers {
+    background-image: url("../img/sprite/icon-hired.svg");
   }
-}
 
-.feature--forth:hover {
+  &--privacy {
+    margin-left: -5px;
+    background-image: url("../img/sprite/icon-detective.svg");
+  }
+
+  &--cost {
+    background-image: url("../img/sprite/icon-tag.svg");
+  }
+
   @media (max-width: $vp-1023) {
-    padding-top: 85px;
+    margin-bottom: 15px;
+
+    &--privacy {
+      margin-bottom: 13px;
+      margin-left: 0;
+    }
+
+    &--cost {
+      margin-bottom: 10px;
+    }
   }
 
   @media (max-width: $vp-767) {
-    padding-top: 80px;
-    padding-right: 32px;
+    width: 30px;
+    height: 30px;
+
+    &--timing {
+      margin-top: 0;
+      background-image: url("../img/sprite/icon-watch-mobile.svg");
+    }
+
+    &--providers {
+      background-image: url("../img/sprite/icon-hired-mobile.svg");
+    }
+
+    &--privacy {
+      margin-left: -1px;
+      margin-bottom: 19px;
+      background-image: url("../img/sprite/icon-detective-mobile.svg");
+    }
+
+    &--cost {
+      margin-bottom: 19px;
+      background-image: url("../img/sprite/icon-tag-mobile.svg");
+    }
+  }
+}
+
+.feature:hover .feature__icon {
+  &--timing {
+    margin-left: -2px;
+    background-image: url("../img/sprite/icon-watch-hover.svg");
+  }
+
+  &--providers {
+    background-image: url("../img/sprite/icon-hired-hover.svg");
+  }
+
+  &--privacy {
+    margin-left: -5px;
+    background-image: url("../img/sprite/icon-detective-hover.svg");
+  }
+
+  &--cost {
+    background-image: url("../img/sprite/icon-tag-hover.svg");
+  }
+
+  @media (max-width: $vp-1023) {
+    &--privacy {
+      margin-left: 0;
+    }
+
+    &--cost {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    &--timing {
+      margin-left: 0;
+      background-image: url("../img/sprite/icon-watch-mobile-hover.svg");
+    }
+
+    &--providers {
+      background-image: url("../img/sprite/icon-hired-mobile-hover.svg");
+    }
+
+    &--privacy {
+      margin-left: -1px;
+      background-image: url("../img/sprite/icon-detective-mobile-hover.svg");
+    }
+
+    &--cost {
+      margin-bottom: 19px;
+      background-image: url("../img/sprite/icon-tag-mobile-hover.svg");
+    }
   }
 }
 
 .feature h3 {
-  position: relative;
-
   margin: 0 0 14px 0;
 
   @include roboto($size-24, $line-140);
   color: $color-deep-sky-blue;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -59px;
-    left: -4px;
-
-    width: 40px;
-    height: 40px;
-
-    background-image: url("../img/sprite/icon-watch.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
   @media (max-width: $vp-1023) {
-    margin-bottom: 10px;
-
-    &::before {
-      top: -53px;
-    }
+    margin-bottom: 9px;
   }
 
   @media (max-width: $vp-767) {
     font-size: 20px;
     line-height: 140%;
-
-    &::before {
-      top: -51px;
-
-      background-image: url("../img/sprite/icon-watch-mobile.svg");
-    }
   }
 }
 
 .feature:nth-of-type(3n) h3 {
   @media (max-width: $vp-1023) {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
   }
 
   @media (max-width: $vp-767) {
     margin-bottom: 13px;
-  }
-}
-
-.feature:nth-of-type(3n):hover h3 {
-  @media (max-width: $vp-1023) {
-    margin-bottom: 5px;
-  }
-
-  @media (max-width: $vp-767) {
-    margin-bottom: 14px;
   }
 }
 
 .feature:nth-of-type(4n) h3 {
-  @media (max-width: $vp-1023) {
-    margin-bottom: 5px;
-  }
-
-  @media (max-width: $vp-767) {
-    margin-bottom: 13px;
-  }
-}
-
-.feature:nth-of-type(4n):hover h3 {
   @media (max-width: $vp-1023) {
     margin-bottom: 6px;
   }
@@ -164,7 +204,7 @@
 }
 
 .feature:hover h3 {
-  margin: 0 0 13px 3px;
+  margin: 0 0 13px 0;
 
   color: $color-alice-blue;
 
@@ -173,84 +213,23 @@
   }
 }
 
-.feature:hover h3::before {
-  left: -3px;
-
-  background-image: url("../img/sprite/icon-watch-hover.svg");
-
-  @media (max-width: $vp-767) {
-    background-image: url("../img/sprite/icon-watch-mobile-hover.svg");
-  }
-}
-
-.feature:nth-of-type(2n) h3::before {
-  background-image: url("../img/sprite/icon-hired.svg");
-
-  @media (max-width: $vp-767) {
-    background-image: url("../img/sprite/icon-hired-mobile.svg");
-  }
-}
-
-.feature:nth-of-type(3n) h3::before {
-  left: -10px;
-
-  background-image: url("../img/sprite/icon-detective.svg");
-
+.feature:nth-of-type(3n):hover h3 {
   @media (max-width: $vp-1023) {
-    left: -5px;
+    margin-bottom: 7px;
   }
 
   @media (max-width: $vp-767) {
-    top: -54px;
-    background-image: url("../img/sprite/icon-detective-mobile.svg");
+    margin-bottom: 12px;
   }
 }
 
-.feature:nth-of-type(4n) h3::before {
-  background-image: url("../img/sprite/icon-tag.svg");
-
+.feature:nth-of-type(4n):hover h3 {
   @media (max-width: $vp-1023) {
-    top: -50px;
+    margin-bottom: 5px;
   }
 
   @media (max-width: $vp-767) {
-    top: -54px;
-    left: -5px;
-
-    background-image: url("../img/sprite/icon-tag-mobile.svg");
-  }
-}
-
-.feature:nth-of-type(2n):hover h3::before {
-  background-image: url("../img/sprite/icon-hired-hover.svg");
-
-  @media (max-width: $vp-767) {
-    background-image: url("../img/sprite/icon-hired-mobile-hover.svg");
-  }
-}
-
-.feature:nth-of-type(3n):hover h3::before {
-  left: -10px;
-
-  background-image: url("../img/sprite/icon-detective-hover.svg");
-
-  @media (max-width: $vp-1023) {
-    left: 0;
-  }
-
-  @media (max-width: $vp-767) {
-    left: -3px;
-
-    background-image: url("../img/sprite/icon-detective-mobile-hover.svg");
-  }
-}
-
-.feature:nth-of-type(4n):hover h3::before {
-  background-image: url("../img/sprite/icon-tag-hover.svg");
-
-  @media (max-width: $vp-767) {
-    top: -54px;
-    background-image: url("../img/sprite/icon-tag-mobile-hover.svg");
+    margin-bottom: 12px;
   }
 }
 
@@ -266,7 +245,5 @@
 }
 
 .feature:hover p {
-  margin-left: 3px;
-
   color: $color-alice-blue;
 }

@@ -17,6 +17,8 @@ export const aboutCompanyButton = document.querySelector('[data-about-company-bu
 export const aboutCompanyInnerSpan = document.querySelector('[data-about-company-inner-span]');
 export const arrFooterTitles = Array.from(footerTitles);
 export const lastFocus = document.activeElement;
+const footerNav = document.querySelector('[data-footer-nav]');
+const footerContacts = document.querySelector('[data-footer-contacts]');
 
 // ---------------------------------
 
@@ -29,30 +31,48 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-  arrFooterTitles.forEach((item) => {
-    item.classList.add('is-close');
-  });
-  footerNavList.classList.add('is-close');
-  footerContactsList.classList.add('is-close');
-  aboutCompanyInnerSpan.classList.add('is-close');
-  aboutCompanyWrapper.classList.add('is-close');
-  aboutCompanyButton.classList.remove('about-company__button--nojs');
-  aboutCompanyButton.classList.add('is-close');
+
+  if (document.body.contains(footerNav) && document.body.contains(footerContacts) && document.body.contains(footerNavList) && document.body.contains(footerContactsList) && arrFooterTitles.length > 1) {
+    footerNav.classList.remove('footer__nav--nojs');
+    footerContacts.classList.remove('footer__contacts--nojs');
+    footerNavList.classList.add('is-close');
+    footerContactsList.classList.add('is-close');
+    arrFooterTitles.forEach((item) => {
+      item.classList.add('is-close');
+    });
+  }
+
+  if (document.body.contains(aboutCompanyWrapper)) {
+    aboutCompanyWrapper.classList.add('is-close');
+  }
+
+  if (document.body.contains(aboutCompanyButton)) {
+    aboutCompanyButton.classList.remove('about-company__button--nojs');
+    aboutCompanyButton.classList.add('is-close');
+  }
+
+  if (document.body.contains(aboutCompanyInnerSpan)) {
+    aboutCompanyInnerSpan.classList.add('is-close');
+  }
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
 
-    for (let i = 0; i < arrFooterTitles.length; i++) {
-      arrFooterTitles[i].addEventListener('click', () => {
-        onFooterTitleClick(arrFooterTitles[i]);
-      });
+    if (arrFooterTitles.length > 0 && document.body.contains(footerNavList) && document.body.contains(footerContactsList)) {
+      for (let i = 0; i < arrFooterTitles.length; i++) {
+        arrFooterTitles[i].addEventListener('click', () => {
+          onFooterTitleClick(arrFooterTitles[i]);
+        });
+      }
     }
 
-    aboutCompanyButton.addEventListener('click', () => {
-      onAboutCompanyButtonClick();
-    });
+    if (document.body.contains(aboutCompanyButton)) {
+      aboutCompanyButton.addEventListener('click', () => {
+        onAboutCompanyButtonClick();
+      });
+    }
 
     document.addEventListener('click', (evt) => {
       if (evt.target === popupOverlay) {

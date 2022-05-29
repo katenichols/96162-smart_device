@@ -49,22 +49,24 @@ export const checkPhoneInput = (phoneInput) => {
   phoneInput.reportValidity();
 };
 
-for (let i = 0; i < checkboxLabels.length; i++) {
-  checkboxLabels[i].addEventListener('click', () => {
-    checkboxInputs[i].setCustomValidity('');
-
-    if (checkboxInputs[i].checked === false) {
-      checkboxLabels[i].classList.remove('is-checked');
-      checkboxLabels[i].classList.add('error');
-      checkboxInputs[i].setCustomValidity('Необходимо дать согласие на обработку персональных данных.');
-    } else {
-      checkboxLabels[i].classList.add('is-checked');
-      checkboxLabels[i].classList.remove('error');
+if (checkboxLabels.length > 0 && checkboxInputs.length > 0) {
+  for (let i = 0; i < checkboxLabels.length; i++) {
+    checkboxLabels[i].addEventListener('click', () => {
       checkboxInputs[i].setCustomValidity('');
-    }
 
-    checkboxInputs[i].reportValidity();
-  });
+      if (checkboxInputs[i].checked === false) {
+        checkboxLabels[i].classList.remove('is-checked');
+        checkboxLabels[i].classList.add('error');
+        checkboxInputs[i].setCustomValidity('Необходимо дать согласие на обработку персональных данных.');
+      } else {
+        checkboxLabels[i].classList.add('is-checked');
+        checkboxLabels[i].classList.remove('error');
+        checkboxInputs[i].setCustomValidity('');
+      }
+
+      checkboxInputs[i].reportValidity();
+    });
+  }
 }
 
 export const formValidity = (elem) => {

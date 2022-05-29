@@ -8,7 +8,6 @@ export const popup = document.querySelector('[data-popup]');
 export const focusables = popup.querySelectorAll('[data-close-popup], [data-name], [data-phone], [data-textarea], [data-submit], [data-checkbox-label]');
 export const popupOverlay = popup.querySelector('[data-popup-overlay]');
 export const firstFocusable = focusables[0];
-export const header = document.querySelector('[data-header]');
 const closePopupButton = popup.querySelector('[data-close-popup]');
 const lastFocusable = focusables[focusables.length - 1];
 
@@ -50,9 +49,12 @@ const openPopup = () => {
   }
 };
 
-closePopupButton.addEventListener('click', () => {
-  closePopup();
-});
+if (document.body.contains(closePopupButton)) {
+  closePopupButton.addEventListener('click', () => {
+    closePopup();
+  });
+}
+
 
 document.addEventListener('click', (evt) => {
   if (evt.target === popupOverlay) {
@@ -65,7 +67,7 @@ document.addEventListener('keydown', (evt) => {
   focusTrap(evt);
 });
 
-if (headerLink) {
+if (document.body.contains(headerLink)) {
   headerLink.addEventListener('click', (evt) => {
     evt.preventDefault();
     openPopup();

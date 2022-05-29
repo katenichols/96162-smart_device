@@ -162,6 +162,13 @@
   }
 }
 
+.popup__form-input-checkbox--nojs {
+  display: grid;
+  grid-template-columns: 15px auto;
+  align-items: center;
+  padding-left: 9px;
+}
+
 .popup__form-input-checkbox label {
   position: relative;
 
@@ -202,4 +209,17 @@
       border: 1px solid $color-torch-red;
     }
   }
+}
+
+.popup__form-input-checkbox--nojs input {
+  width: 15px;
+  height: 15px;
+}
+
+.popup__form-input-checkbox--nojs label {
+  display: block;
+  padding-left: 10px;
+
+  @include ptmono($size-14, $line-16);
+  color: $color-default-white;
 }

@@ -198,6 +198,13 @@
   }
 }
 
+.footer__nav--nojs h4,
+.footer__contacts--nojs h4 {
+  @media (max-width: $vp-767) {
+    margin-bottom: 15px;
+  }
+}
+
 .footer__nav-list {
   display: flex;
   flex-direction: column;
