@@ -11,7 +11,7 @@
 
   @media (max-width: $vp-767) {
     padding-top: 46px;
-    padding-bottom: 79px;
+    padding-bottom: 80px;
   }
 }
 
@@ -57,10 +57,14 @@
 .about-company__inner-wrapper {
   &.is-close {
     display: none;
+    width: 1px;
+    height: 1px;
   }
 
   &.is-open {
     display: block;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -118,6 +122,7 @@
 .about-company__button {
   margin-top: 20px;
   padding: 14px 50px 14px 49px;
+  user-select: none;
 
   @include roboto-bold($size-14, $line-16);
   color: $color-deep-sky-blue;
@@ -141,6 +146,7 @@
   }
 
   @media (max-width: $vp-767) {
+    margin-top: -4px;
     padding: 8px 39px 10px 40px;
   }
 }

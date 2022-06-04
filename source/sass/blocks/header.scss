@@ -14,12 +14,22 @@
   }
 
   @media (max-width: $vp-1023) {
+    position: relative;
+    top: auto;
+    left: auto;
+
     padding: 20px 0 25px;
   }
 
   @media (max-width: $vp-767) {
     padding: 15px 0 20px;
   }
+}
+
+.header__picture {
+  display: block;
+  width: 215px;
+  margin-right: 42.7%;
 }
 
 .header__logo {
@@ -34,6 +44,7 @@
   width: 160px;
   margin-top: -5px;
   padding: 10px 15px 13px 17px;
+  user-select: none;
 
   @include roboto-bold($size-14, $line-16);
   text-transform: uppercase;
@@ -45,31 +56,59 @@
 
   @media (max-width: $vp-1023) {
     display: none;
+    margin: 0;
+    padding: 0;
+
+    border: none;
   }
 }
 
-.header__contacts {
+.header__contacts-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 10px;
-  margin-left: -4px;
+  padding-top: 8px;
+  padding-right: 24.7%;
 
   @media (max-width: $vp-1023) {
     justify-content: flex-end;
-    margin-left: 0;
+    padding-top: 10px;
+    padding-right: 0;
   }
 
   @media (max-width: $vp-767) {
-    margin-top: 5px;
+    padding-top: 5px;
   }
 }
 
-.header__contacts a {
+.header__contacts-item {
+  margin-right: 10px;
+  margin-bottom: 15px;
+
+  @media (max-width: $vp-1023) {
+    margin-right: 35px;
+
+    &:last-of-type {
+      margin-right: 25px;
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    margin-right: 35px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.header__contacts-item a {
   position: relative;
 
-  width: 208px;
+  width: auto;
+  margin: 0;
   padding: 0 0 0 35px;
+  user-select: text;
 
   @include ptmono($size-16, $line-18);
   letter-spacing: normal;
@@ -91,41 +130,23 @@
     background-repeat: no-repeat;
   }
 
-  &:nth-of-type(2n) {
-    margin-left: 44px;
-    margin-bottom: 15px;
-
-    &::before {
-      background-image: url("../img/sprite/icon-phone.svg");
-    }
-  }
-
-  @media (max-width: $vp-1058) {
-    &:nth-of-type(2n) {
-      margin-left: 0;
-    }
-  }
-
   @media (max-width: $vp-1023) {
     display: block;
     width: 0;
     height: 20px;
-    margin: 0;
-    padding: 0 0 0 50px;
+    padding: 0 0 0 25px;
     overflow: hidden;
 
     color: $color-transparent;
+  }
+}
 
-    &:nth-of-type(2n) {
-      margin-bottom: 0;
-      margin-right: 0;
-      margin-left: 10px;
-    }
+.header__contacts-item:nth-of-type(even) a {
+  &::before {
+    background-image: url("../img/sprite/icon-phone.svg");
   }
 
   @media (max-width: $vp-767) {
-    &:nth-of-type(2n) {
-      padding-left: 40px;
-    }
+    padding-left: 40px;
   }
 }

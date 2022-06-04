@@ -6,6 +6,7 @@
   background-image: url("../img/main-screen-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   background-color: $color-black-pearl;
 
   @media (min-resolution: 2dppx) {
@@ -24,7 +25,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 99px 0 190px;
+    padding: 94px 0 190px;
 
     background-image: url("../img/main-screen-mobile.jpg");
     background-size: cover;
@@ -36,7 +37,7 @@
 }
 
 .main-screen h1 {
-  margin: 0 0 32px 125px;
+  margin: 0 0 32px 10.3%;
 
   @include roboto-bold($size-80, $line-94);
   color: $color-alice-blue;
@@ -58,9 +59,21 @@
   }
 }
 
+.main-screen a p {
+  margin: 0 0 0 0;
+
+  @include roboto-bold($size-18, $line-21);
+  color: $color-alice-blue;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @media (max-width: $vp-767) {
+    display: none;
+  }
+}
+
 .main-screen p {
-  width: 685px;
-  margin: 0 0 47px 125px;
+  margin: 0 33.6% 47px 10.2%;
 
   @include ptmono($size-22, $line-155);
   color: $color-alice-blue;
@@ -84,6 +97,7 @@
   width: 410px;
   margin-left: 125px;
   padding: 15px 23px 19px 27px;
+  user-select: none;
 
   background-color: $color-deep-sky-blue;
   border-radius: 3px;
@@ -97,19 +111,6 @@
     max-width: 270px;
     margin-left: 0;
     padding: 13px 13px 12px 37px;
-  }
-}
-
-.main-screen a p {
-  margin: 0;
-
-  @include roboto-bold($size-18, $line-21);
-  color: $color-alice-blue;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-
-  @media (max-width: $vp-767) {
-    display: none;
   }
 }
 

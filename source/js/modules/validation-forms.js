@@ -16,6 +16,16 @@ for (let z = 0; z < nameInputs.length; z++) {
 for (let i = 0; i < phoneInputs.length; i++) {
   phoneInputs[i].addEventListener('input', () => {
     outlineIfNotError(phoneInputs[i]);
+
+    phoneInputs[i].addEventListener('keydown', (evt) => {
+      if (phoneInputs[i].length === 4 && evt.keyCode === 8) {
+        if (evt.preventDefault) {
+          evt.preventDefault();
+        }
+        phoneInputs[i].value = '+7(';
+      }
+    });
+
     iMask(phoneInputs[i], maskOptions);
   });
 }

@@ -10,7 +10,7 @@
     content: "";
     position: absolute;
     top: 246px;
-    left: 350px;
+    left: 18.25%;
     z-index: 1;
 
     width: 26.5%;
@@ -53,7 +53,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding: 46px 0 69px;
+    padding: 47px 0 70px;
   }
 }
 
@@ -87,7 +87,7 @@
   }
 
   @media (max-width: $vp-767) {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 
     font-size: 30px;
     line-height: 42px;
@@ -117,6 +117,10 @@
   display: flex;
   width: 100%;
   margin-bottom: 20px;
+
+  &--clickable {
+    flex-direction: row-reverse;
+  }
 
   @media (max-width: $vp-767) {
     flex-direction: column;
@@ -194,7 +198,7 @@
 
   @media (max-width: $vp-767) {
     min-height: 180px;
-    margin-bottom: 26px;
+    margin-bottom: 27px;
     padding-top: 23px;
   }
 }
@@ -205,6 +209,7 @@
   padding-top: 15px;
   padding-bottom: 11px;
   text-align: center;
+  user-select: none;
 
   @include roboto-bold($size-16, $line-19);
   color: $color-default-white;

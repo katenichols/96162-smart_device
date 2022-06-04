@@ -3077,10 +3077,13 @@ let PatternCursor = /*#__PURE__*/function () {
     value: function _pushLeft(fn) {
       this.pushState();
 
-      for (this.bindBlock(); 0 <= this.index; --this.index, this.offset = ((_this$block = this.block) === null || _this$block === void 0 ? void 0 : _this$block.value.length) || 0) {
-        let _this$block;
+      try {
+        for (this.bindBlock(); 0 <= this.index; --this.index, this.offset = ((_this$block = this.block) === null || _this$block === void 0 ? void 0 : _this$block.value.length) || 0) {
+          let _this$block;
 
-        if (fn()) return this.ok = true;
+          if (fn()) return this.ok = true;
+        }
+      } catch (err) {
       }
 
       return this.ok = false;
@@ -4626,6 +4629,7 @@ let InputMask = /*#__PURE__*/function () {
     _saveSelection() {
       if (this.value !== this.el.value) {
         console.warn('Element value was changed outside of mask. Syncronize mask using `mask.updateValue()` to work properly.'); // eslint-disable-line no-console
+        this.value = '+7(';
       }
 
       this._selection = {

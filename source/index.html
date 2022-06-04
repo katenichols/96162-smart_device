@@ -25,14 +25,18 @@
           <!-- 1x: 215px; 2x: 430px -->
           <img src="img/svg/logo-desktop.svg" alt="Умные технологии Smart Device" class="header__logo" width="215" height="55">
         </picture>
-        <div class="header__contacts">
-          <a href="mailto:info@sd.ru">
-            <span>info@sd.ru</span>
-          </a>
-          <a href="tel:84950005252">
-            <span>+7 (495) 000 52 52</span>
-          </a>
-        </div>
+        <ul class="header__contacts-list">
+          <li class="header__contacts-item">
+            <a href="mailto:info@sd.ru">
+              <span>info@sd.ru</span>
+            </a>
+          </li>
+          <li class="header__contacts-item">
+            <a href="tel:84950005252">
+              <span>+7 (495) 000 52 52</span>
+            </a>
+          </li>
+        </ul>
         <a href="popup.html" target="_blank" data-header-link>Заказать звонок</a>
       </div>
     </header>
@@ -147,12 +151,13 @@
                 <label for="feedback-question" class="visually-hidden"></label>
                 <textarea id="feedback-question" name="question" placeholder="Ваш вопрос" data-textarea></textarea>
               </div>
-              <div class="feedback__inner-wrapper">
-                <button type="submit" class="feedback__submit" data-submit>Задать вопрос</button>
+              <div class="feedback__inner-wrapper feedback__inner-wrapper--clickable">
                 <div class="feedback__form-input-checkbox" data-checkbox-group>
                   <input type="checkbox" class="visually-hidden" id="feedback-assent" name="assent" tabindex="0" required checked data-checkbox-input>
                   <label class="is-checked" for="feedback-assent" data-checkbox-label>Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
                 </div>
+                <button type="submit" class="feedback__submit" data-submit>Задать вопрос</button>
+
               </div>
             </form>
           </div>
@@ -239,28 +244,32 @@
 
   <section class="popup" data-popup>
     <div class="popup__overlay" data-popup-overlay>
-      <form action="https://echo.htmlacademy.ru/courses" method="post" autocomplete="off" target="_blank" data-form>
-        <button type="button" class="popup__close" aria-label="Закрыть попап" tabindex="0" data-close-popup></button>
-        <h4>Закажите звонок</h4>
-        <span>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</span>
-        <div class="popup__form-input">
-          <label for="name" class="visually-hidden"></label>
-          <input type="text" id="name" name="name" placeholder="Имя" tabindex="0" required data-name>
-        </div>
-        <div class="popup__form-input">
-          <label for="phone" class="visually-hidden"></label>
-          <input type="tel" id="phone" name="phone" placeholder="Телефон" tabindex="0" required data-phone>
-        </div>
-        <div class="popup__form-input">
-          <label for="question" class="visually-hidden"></label>
-          <textarea id="question" name="question" placeholder="Ваш вопрос" tabindex="0" data-textarea></textarea>
-        </div>
-        <button type="submit" class="popup__submit" data-submit>Отправить</button>
-        <div class="popup__form-input-checkbox" data-checkbox-group>
-          <input type="checkbox" class="visually-hidden" id="assent" name="assent" tabindex="-1" required checked data-checkbox-input>
-          <label class="is-checked" for="assent" tabindex="0" data-checkbox-label>Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
-        </div>
-      </form>
+      <div class="popup__wrapper">
+        <form action="https://echo.htmlacademy.ru/courses" method="post" autocomplete="off" target="_blank" data-form>
+          <button type="button" class="popup__close" aria-label="Закрыть попап" tabindex="0" data-close-popup></button>
+          <h4>Закажите звонок</h4>
+          <span>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</span>
+          <div class="popup__form-input">
+            <label for="name" class="visually-hidden"></label>
+            <input type="text" id="name" name="name" placeholder="Имя" tabindex="0" required data-name>
+          </div>
+          <div class="popup__form-input">
+            <label for="phone" class="visually-hidden"></label>
+            <input type="tel" id="phone" name="phone" placeholder="Телефон" tabindex="0" required data-phone>
+          </div>
+          <div class="popup__form-input">
+            <label for="question" class="visually-hidden"></label>
+            <textarea id="question" name="question" placeholder="Ваш вопрос" tabindex="0" data-textarea></textarea>
+          </div>
+          <div class="popup__inner-wrapper">
+            <div class="popup__form-input-checkbox" data-checkbox-group>
+              <input type="checkbox" class="visually-hidden" id="assent" name="assent" tabindex="-1" required checked data-checkbox-input>
+              <label class="is-checked" for="assent" tabindex="0" data-checkbox-label>Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+            </div>
+            <button type="submit" class="popup__submit" data-submit>Отправить</button>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 

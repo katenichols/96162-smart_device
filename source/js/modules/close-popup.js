@@ -8,8 +8,11 @@ const closePopup = () => {
   popup.classList.remove('is-open');
   lastFocus.focus();
 
-  if (navigator.userAgent.includes('Chrome')) {
-    body.style.padding = '0 0 0 0';
+  if (popup.classList.contains('is-open')) {
+    popup.classList.remove('is-open');
+    if (navigator.userAgent.includes('Chrome')) {
+      body.style.padding = '0 0 0 0';
+    }
   }
 
   document.removeEventListener('keydown', () => {
