@@ -125,6 +125,10 @@
   @media (max-width: $vp-767) {
     flex-direction: column;
     justify-content: flex-start;
+
+    &--clickable {
+      flex-direction: column-reverse;
+    }
   }
 }
 
@@ -243,6 +247,10 @@
     margin-right: auto;
     margin-left: 0;
   }
+}
+
+.feedback__form-input-checkbox input[type="checkbox"] {
+  width: 1px;
 }
 
 .feedback__form-input-checkbox label {

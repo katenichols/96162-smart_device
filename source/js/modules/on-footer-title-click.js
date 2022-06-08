@@ -4,6 +4,7 @@ export const onFooterTitleClick = (el) => {
   if (el === arrFooterTitles[0] && el.classList.contains('is-close') && arrFooterTitles[1].classList.contains('is-close')) {
     el.classList.remove('is-close');
     el.classList.add('is-open');
+    footerNavList.classList.remove('is-close');
     footerNavList.classList.add('is-open');
     return;
   }
@@ -11,6 +12,7 @@ export const onFooterTitleClick = (el) => {
   if (el === arrFooterTitles[1] && el.classList.contains('is-close') && arrFooterTitles[0].classList.contains('is-close')) {
     el.classList.remove('is-close');
     el.classList.add('is-open');
+    footerContactsList.classList.remove('is-close');
     footerContactsList.classList.add('is-open');
     return;
   }

@@ -58,7 +58,6 @@
 
   display: block;
   width: 500px;
-  margin-left: calc(50% - 258px);
   padding: 36px 40px 45px;
 
   background-color: $color-deep-sky-blue;
@@ -174,6 +173,10 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.popup input[type="checkbox"] {
+  width: 1px;
 }
 
 .popup__form-input-checkbox--nojs {
