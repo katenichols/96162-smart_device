@@ -224,8 +224,13 @@
   border: none;
   border-radius: 3px;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
     cursor: pointer;
+
+    box-shadow: 0 0 15px 6px $color-default-white;
   }
 
   @media (max-width: $vp-767) {
@@ -263,6 +268,8 @@
   @include ptmono($size-14, $line-16);
   color: $color-default-white;
 
+  border-radius: 2px;
+
   &::before {
     content: "";
     position: absolute;
@@ -274,10 +281,6 @@
 
     border: 1px solid $color-default-white;
     border-radius: 2px;
-  }
-
-  &:hover {
-    cursor: pointer;
   }
 
   &.is-checked {
@@ -307,6 +310,17 @@
       top: 7px;
       left: 5px;
     }
+  }
+}
+
+.feedback__form-input-checkbox label:hover,
+.feedback__form-input-checkbox label:active,
+.feedback__form-input-checkbox label:focus,
+.feedback__form-input-checkbox label:focus:focus-visible {
+  cursor: pointer;
+
+  &::before {
+    box-shadow: 0 0 15px 6px $color-default-white;
   }
 }
 

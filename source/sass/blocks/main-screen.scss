@@ -102,6 +102,13 @@
   background-color: $color-deep-sky-blue;
   border-radius: 3px;
 
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    box-shadow: 0 0 15px 6px $color-deep-sky-blue;
+  }
+
   @media (max-width: $vp-1023) {
     margin-left: 45px;
   }

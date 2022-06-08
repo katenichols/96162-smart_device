@@ -697,6 +697,17 @@ ul {
   border-radius: 3px;
 }
 
+.container--header a:hover,
+.container--header a:active,
+.container--header a:focus,
+.container--header a:focus-visible {
+  color: #00b2ff;
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
+  box-shadow: 0px 0px 15px 6px #00b2ff;
+}
+
 .header__contacts-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -746,8 +757,28 @@ ul {
   background-repeat: no-repeat;
 }
 
+.header__contacts-item a:hover,
+.header__contacts-item a:active,
+.header__contacts-item a:focus,
+.header__contacts-item a:focus-visible {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.header__contacts-item a:hover:before,
+.header__contacts-item a:active:before,
+.header__contacts-item a:focus:before,
+.header__contacts-item a:focus-visible:before {
+  background-image: url("../img/sprite/icon-mail-hover.svg");
+}
+
 .header__contacts-item:nth-of-type(even) a::before {
   background-image: url("../img/sprite/icon-phone.svg");
+}
+
+.header__contacts-item:nth-of-type(even) a:hover::before {
+  background-image: url("../img/sprite/icon-phone-hover.svg");
 }
 
 .footer {
@@ -788,6 +819,15 @@ ul {
   text-align: center;
 }
 
+.footer__social a:hover,
+.footer__social a:active,
+.footer__social a:focus,
+.footer__social a:focus-visible {
+  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
+  box-shadow: 0px 0px 15px 6px #00b2ff;
+  border-radius: 50%;
+}
+
 .footer__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -805,7 +845,7 @@ ul {
 
 .footer h4 {
   margin-top: 0;
-  margin-bottom: 22px;
+  padding-bottom: 0;
   font-family: "Roboto Condensed Regular", "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-size: 15px;
@@ -843,6 +883,15 @@ ul {
   margin-bottom: 6px;
 }
 
+.footer__nav a:hover,
+.footer__nav a:active,
+.footer__nav a:focus,
+.footer__nav a:focus-visible {
+  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
+  box-shadow: 0px 0px 15px 6px #00b2ff;
+  border-radius: 3px;
+}
+
 .footer__contacts-item {
   max-width: 345px;
   margin-bottom: 5px;
@@ -869,6 +918,15 @@ ul {
   line-height: 25px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__contacts a:hover,
+.footer__contacts a:active,
+.footer__contacts a:focus,
+.footer__contacts a:focus-visible {
+  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
+  box-shadow: 0px 0px 15px 6px #00b2ff;
+  border-radius: 3px;
 }
 
 .main-screen {
@@ -928,6 +986,14 @@ ul {
   user-select: none;
   background-color: #00b2ff;
   border-radius: 3px;
+}
+
+.main-screen a:hover,
+.main-screen a:active,
+.main-screen a:focus,
+.main-screen a:focus-visible {
+  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
+  box-shadow: 0px 0px 15px 6px #00b2ff;
 }
 
 .main-screen a span {
@@ -1127,8 +1193,14 @@ ul {
   display: none;
 }
 
-.about-company__button:hover {
+.about-company__button:hover,
+.about-company__button:active,
+.about-company__button:focus,
+.about-company__button:focus-visible {
   cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
+  box-shadow: 0px 0px 15px 6px #00b2ff;
 }
 
 .about-company__button.is-close span {
@@ -1212,6 +1284,14 @@ ul {
   background-color: #026593;
 }
 
+.card a:hover,
+.card a:active,
+.card a:focus,
+.card a:focus-visible {
+  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
+  box-shadow: 0px 0px 15px 6px #00b2ff;
+}
+
 .card a::before {
   content: "";
   position: absolute;
@@ -1257,7 +1337,7 @@ ul {
 .popup.is-open {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -8px;
   z-index: 10;
   display: block;
   width: 100%;
@@ -1317,8 +1397,13 @@ ul {
   border: none;
 }
 
-.popup__close:hover {
+.popup__close:hover,
+.popup__close:active,
+.popup__close:focus,
+.popup__close:focus-visible {
   cursor: pointer;
+  -webkit-box-shadow: 0px 0px 15px 6px #ffffff;
+  box-shadow: 0px 0px 15px 6px #ffffff;
 }
 
 .popup h4 {
@@ -1431,8 +1516,18 @@ ul {
   border-radius: 3px;
 }
 
-.popup__submit:hover {
+.popup__submit:hover,
+.popup__submit:active,
+.popup__submit:focus,
+.popup__submit:focus-visible {
   cursor: pointer;
+  -webkit-box-shadow: 0px 0px 15px 6px #ffffff;
+  box-shadow: 0px 0px 15px 6px #ffffff;
+}
+
+.popup__submit:focus-visible {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .popup input[type="checkbox"] {
@@ -1460,6 +1555,7 @@ ul {
   line-height: 15px;
   font-weight: 400;
   color: #ffffff;
+  border-radius: 2px;
 }
 
 .popup__form-input-checkbox label::before {
@@ -1473,10 +1569,6 @@ ul {
   border-radius: 2px;
 }
 
-.popup__form-input-checkbox label:hover {
-  cursor: pointer;
-}
-
 .popup__form-input-checkbox label.is-checked::before {
   background-image: url("../../img/sprite/icon-checkbox-mark.svg");
   background-repeat: no-repeat;
@@ -1486,6 +1578,23 @@ ul {
 
 .popup__form-input-checkbox label.error::before {
   border: 1px solid #ff1553;
+}
+
+.popup__form-input-checkbox label:hover,
+.popup__form-input-checkbox label:active,
+.popup__form-input-checkbox label:focus,
+.popup__form-input-checkbox label:focus-visible {
+  cursor: pointer;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.popup__form-input-checkbox label:hover:before,
+.popup__form-input-checkbox label:active:before,
+.popup__form-input-checkbox label:focus:before,
+.popup__form-input-checkbox label:focus-visible:before {
+  -webkit-box-shadow: 0px 0px 15px 6px #ffffff;
+  box-shadow: 0px 0px 15px 6px #ffffff;
 }
 
 .popup__form-input-checkbox--nojs input {
@@ -1666,8 +1775,13 @@ ul {
   border-radius: 3px;
 }
 
-.feedback__submit:hover {
+.feedback__submit:hover,
+.feedback__submit:active,
+.feedback__submit:focus,
+.feedback__submit:focus-visible {
   cursor: pointer;
+  -webkit-box-shadow: 0px 0px 15px 6px #ffffff;
+  box-shadow: 0px 0px 15px 6px #ffffff;
 }
 
 .feedback__form-input-checkbox {
@@ -1691,6 +1805,7 @@ ul {
   line-height: 15px;
   font-weight: 400;
   color: #ffffff;
+  border-radius: 2px;
 }
 
 .feedback__form-input-checkbox label::before {
@@ -1704,10 +1819,6 @@ ul {
   border-radius: 2px;
 }
 
-.feedback__form-input-checkbox label:hover {
-  cursor: pointer;
-}
-
 .feedback__form-input-checkbox label.is-checked::before {
   background-image: url("../img/sprite/icon-checkbox-mark.svg");
   background-repeat: no-repeat;
@@ -1718,6 +1829,21 @@ ul {
   -webkit-box-shadow: 0 0 0 2px #ff1553, 0 0 0 3px #ffffff;
   box-shadow: 0 0 0 2px #ff1553, 0 0 0 3px #ffffff;
   border-radius: 2px;
+}
+
+.feedback__form-input-checkbox label:hover,
+.feedback__form-input-checkbox label:active,
+.feedback__form-input-checkbox label:focus,
+.feedback__form-input-checkbox label:focus:focus-visible {
+  cursor: pointer;
+}
+
+.feedback__form-input-checkbox label:hover::before,
+.feedback__form-input-checkbox label:active::before,
+.feedback__form-input-checkbox label:focus::before,
+.feedback__form-input-checkbox label:focus:focus-visible::before {
+  -webkit-box-shadow: 0px 0px 15px 6px #ffffff;
+  box-shadow: 0px 0px 15px 6px #ffffff;
 }
 
 .feedback__form-input-checkbox input:focus + label {
@@ -1803,6 +1929,12 @@ ul {
     margin: 0;
     padding: 0;
     border: none;
+  }
+
+  .container--header a:hover {
+    color: #f2f5f6;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #f2f5f6;
   }
 
   .header__contacts-list {
@@ -2159,7 +2291,7 @@ ul {
     -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 0;
-    padding-top: 12px;
+    padding-top: 34px;
     padding-bottom: 30px;
   }
 
@@ -2215,24 +2347,27 @@ ul {
     position: relative;
     width: 100%;
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   .footer h4:nth-of-type(2n) {
-    margin-bottom: 18px;
+    padding-bottom: 18px;
   }
 
-  .footer h4:hover {
+  .footer h4:hover,
+  .footer h4:active {
     cursor: pointer;
+    background-color: #00b2ff;
   }
 
   .footer h4.is-close {
-    margin-bottom: 23px;
+    padding-bottom: 23px;
   }
 
   .footer h4.is-close::before {
     content: "";
     position: absolute;
-    top: -2px;
+    top: 20px;
     right: 26px;
     width: 15px;
     height: 15px;
@@ -2242,13 +2377,13 @@ ul {
   }
 
   .footer h4.is-open {
-    margin-bottom: 18px;
+    padding-bottom: 18px;
   }
 
   .footer h4.is-open::before {
     content: "";
     position: absolute;
-    top: -2px;
+    top: 20px;
     right: 27px;
     width: 15px;
     height: 15px;
@@ -2259,8 +2394,7 @@ ul {
 
   .footer__nav h4,
   .footer__contacts h4 {
-    margin-top: 22px;
-    padding: 0 25px;
+    padding: 22px 25px 23px;
   }
 
   .footer__nav--nojs h4,

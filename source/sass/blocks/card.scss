@@ -30,6 +30,13 @@
     background-image: url("../img/card1-desktop@2x.jpg");
   }
 
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    box-shadow: 0 0 15px 6px $color-deep-sky-blue;
+  }
+
   &::before {
     content: "";
     position: absolute;

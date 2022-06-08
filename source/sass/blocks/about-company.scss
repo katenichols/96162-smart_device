@@ -137,8 +137,14 @@
     display: none;
   }
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
     cursor: pointer;
+
+    border: 1px solid $color-transparent;
+    box-shadow: 0 0 15px 6px $color-deep-sky-blue;
   }
 
   @media (max-width: $vp-1023) {

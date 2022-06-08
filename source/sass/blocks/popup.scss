@@ -9,7 +9,7 @@
   &.is-open {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -8px;
     z-index: 10;
 
     display: block;
@@ -86,8 +86,13 @@
   background-color: $color-deep-sky-blue;
   border: none;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
     cursor: pointer;
+
+    box-shadow: 0 0 15px 6px $color-default-white;
   }
 }
 
@@ -170,8 +175,17 @@
   border: none;
   border-radius: 3px;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
     cursor: pointer;
+
+    box-shadow: 0 0 15px 6px $color-default-white;
+  }
+
+  &:focus-visible {
+    box-shadow: none;
   }
 }
 
@@ -195,6 +209,8 @@
   @include ptmono($size-14, $line-16);
   color: $color-default-white;
 
+  border-radius: 2px;
+
   &::before {
     content: "";
     position: absolute;
@@ -206,10 +222,6 @@
 
     border: 1px solid $color-default-white;
     border-radius: 2px;
-  }
-
-  &:hover {
-    cursor: pointer;
   }
 
   &.is-checked {
@@ -225,6 +237,18 @@
     &::before {
       border: 1px solid $color-torch-red;
     }
+  }
+}
+
+.popup__form-input-checkbox label:hover,
+.popup__form-input-checkbox label:active,
+.popup__form-input-checkbox label:focus,
+.popup__form-input-checkbox label:focus-visible {
+  cursor: pointer;
+  box-shadow: none;
+
+  &::before {
+    box-shadow: 0 0 15px 6px $color-default-white;
   }
 }
 

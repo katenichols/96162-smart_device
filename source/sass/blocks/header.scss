@@ -54,12 +54,30 @@
   border: 1px solid $color-alice-blue;
   border-radius: 3px;
 
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    color: $color-deep-sky-blue;
+
+    background-color: $color-default-white;
+    border: 1px solid $color-transparent;
+    box-shadow: 0 0 15px 6px $color-deep-sky-blue;
+  }
+
   @media (max-width: $vp-1023) {
     display: none;
     margin: 0;
     padding: 0;
 
     border: none;
+
+    &:hover {
+      color: $color-alice-blue;
+
+      background-color: $color-transparent;
+      border: 1px solid $color-alice-blue;
+    }
   }
 }
 
@@ -139,12 +157,28 @@
   }
 }
 
+.header__contacts-item a:hover,
+.header__contacts-item a:active,
+.header__contacts-item a:focus,
+.header__contacts-item a:focus-visible {
+  color: $color-default-white;
+
+  background-color: $color-transparent;
+  border: none;
+
+  &::before {
+    background-image: url("../img/sprite/icon-mail-hover.svg");
+  }
+}
+
 .header__contacts-item:nth-of-type(even) a {
   &::before {
     background-image: url("../img/sprite/icon-phone.svg");
   }
+}
 
-  // @media (max-width: $vp-767) {
-  //   padding-left: 40px;
-  // }
+.header__contacts-item:nth-of-type(even) a:hover {
+  &::before {
+    background-image: url("../img/sprite/icon-phone-hover.svg");
+  }
 }

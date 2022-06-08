@@ -31,7 +31,7 @@
     position: relative;
     flex-direction: column;
     margin-bottom: 0;
-    padding-top: 12px;
+    padding-top: 34px;
     padding-bottom: 30px;
 
     &::after {
@@ -91,6 +91,14 @@
   padding: 5px 0 0 0;
   text-align: center;
 
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    box-shadow: 0 0 15px 6px $color-deep-sky-blue;
+    border-radius: 50%;
+  }
+
   @media (max-width: $vp-1023) {
     width: 30px;
     height: 30px;
@@ -146,7 +154,7 @@
 
 .footer h4 {
   margin-top: 0;
-  margin-bottom: 22px;
+  padding-bottom: 0;
 
   @include roboto($size-15, $line-16);
   color: $color-default-white;
@@ -158,22 +166,26 @@
 
     width: 100%;
     margin-top: 0;
+    margin-bottom: 0;
 
     &:nth-of-type(2n) {
-      margin-bottom: 18px;
+      padding-bottom: 18px;
     }
 
-    &:hover {
+    &:hover,
+    &:active {
       cursor: pointer;
+
+      background-color: $color-deep-sky-blue;
     }
 
     &.is-close {
-      margin-bottom: 23px;
+      padding-bottom: 23px;
 
       &::before {
         content: "";
         position: absolute;
-        top: -2px;
+        top: 20px;
         right: 26px;
 
         width: 15px;
@@ -186,12 +198,12 @@
     }
 
     &.is-open {
-      margin-bottom: 18px;
+      padding-bottom: 18px;
 
       &::before {
         content: "";
         position: absolute;
-        top: -2px;
+        top: 20px;
         right: 27px;
 
         width: 15px;
@@ -208,8 +220,7 @@
 .footer__nav h4,
 .footer__contacts h4 {
   @media (max-width: $vp-767) {
-    margin-top: 22px;
-    padding: 0 25px;
+    padding: 22px 25px 23px;
   }
 }
 
@@ -269,6 +280,14 @@
   }
 }
 
+.footer__nav a:hover,
+.footer__nav a:active,
+.footer__nav a:focus,
+.footer__nav a:focus-visible {
+  box-shadow: 0 0 15px 6px $color-deep-sky-blue;
+  border-radius: 3px;
+}
+
 .footer__contacts-list {
   @media (max-width: $vp-767) {
     &.is-close {
@@ -312,6 +331,14 @@
 .footer__contacts a {
   @include ptmono($size-16, $line-25);
   color: $color-default-white-fade;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus-visible {
+    box-shadow: 0 0 15px 6px $color-deep-sky-blue;
+    border-radius: 3px;
+  }
 
   @media (max-width: $vp-767) {
     font-size: 14px;
