@@ -879,10 +879,6 @@ ul {
   margin-bottom: 9px;
 }
 
-.footer__nav-item:nth-of-type(3n) {
-  margin-bottom: 6px;
-}
-
 .footer__nav a:hover,
 .footer__nav a:active,
 .footer__nav a:focus,
@@ -2006,10 +2002,6 @@ ul {
 
   .footer__nav-item {
     width: 70%;
-  }
-
-  .footer__nav-item:nth-of-type(4n) {
-    margin-bottom: 8px;
   }
 
   .main-screen {
