@@ -318,13 +318,9 @@
 .feedback__form-input-checkbox label:focus,
 .feedback__form-input-checkbox label:focus:focus-visible {
   cursor: pointer;
+  box-shadow: none;
 
   &::before {
     box-shadow: 0 0 15px 6px $color-default-white;
   }
-}
-
-.feedback__form-input-checkbox input:focus + label {
-  box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
-  border-radius: 2px;
 }

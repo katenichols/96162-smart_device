@@ -183,10 +183,6 @@
 
     box-shadow: 0 0 15px 6px $color-default-white;
   }
-
-  &:focus-visible {
-    box-shadow: none;
-  }
 }
 
 .popup input[type="checkbox"] {

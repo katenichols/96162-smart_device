@@ -704,8 +704,8 @@ ul {
   color: #00b2ff;
   background-color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0);
-  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
-  box-shadow: 0px 0px 15px 6px #00b2ff;
+  -webkit-box-shadow: 0 0 15px 6px #00b2ff;
+  box-shadow: 0 0 15px 6px #00b2ff;
 }
 
 .header__contacts-list {
@@ -766,10 +766,10 @@ ul {
   border: none;
 }
 
-.header__contacts-item a:hover:before,
-.header__contacts-item a:active:before,
-.header__contacts-item a:focus:before,
-.header__contacts-item a:focus-visible:before {
+.header__contacts-item a:hover::before,
+.header__contacts-item a:active::before,
+.header__contacts-item a:focus::before,
+.header__contacts-item a:focus-visible::before {
   background-image: url("../img/sprite/icon-mail-hover.svg");
 }
 
@@ -823,8 +823,8 @@ ul {
 .footer__social a:active,
 .footer__social a:focus,
 .footer__social a:focus-visible {
-  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
-  box-shadow: 0px 0px 15px 6px #00b2ff;
+  -webkit-box-shadow: 0 0 15px 6px #00b2ff;
+  box-shadow: 0 0 15px 6px #00b2ff;
   border-radius: 50%;
 }
 
@@ -887,8 +887,8 @@ ul {
 .footer__nav a:active,
 .footer__nav a:focus,
 .footer__nav a:focus-visible {
-  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
-  box-shadow: 0px 0px 15px 6px #00b2ff;
+  -webkit-box-shadow: 0 0 15px 6px #00b2ff;
+  box-shadow: 0 0 15px 6px #00b2ff;
   border-radius: 3px;
 }
 
@@ -924,8 +924,8 @@ ul {
 .footer__contacts a:active,
 .footer__contacts a:focus,
 .footer__contacts a:focus-visible {
-  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
-  box-shadow: 0px 0px 15px 6px #00b2ff;
+  -webkit-box-shadow: 0 0 15px 6px #00b2ff;
+  box-shadow: 0 0 15px 6px #00b2ff;
   border-radius: 3px;
 }
 
@@ -992,8 +992,8 @@ ul {
 .main-screen a:active,
 .main-screen a:focus,
 .main-screen a:focus-visible {
-  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
-  box-shadow: 0px 0px 15px 6px #00b2ff;
+  -webkit-box-shadow: 0 0 15px 6px #00b2ff;
+  box-shadow: 0 0 15px 6px #00b2ff;
 }
 
 .main-screen a span {
@@ -1199,8 +1199,8 @@ ul {
 .about-company__button:focus-visible {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0);
-  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
-  box-shadow: 0px 0px 15px 6px #00b2ff;
+  -webkit-box-shadow: 0 0 15px 6px #00b2ff;
+  box-shadow: 0 0 15px 6px #00b2ff;
 }
 
 .about-company__button.is-close span {
@@ -1288,8 +1288,8 @@ ul {
 .card a:active,
 .card a:focus,
 .card a:focus-visible {
-  -webkit-box-shadow: 0px 0px 15px 6px #00b2ff;
-  box-shadow: 0px 0px 15px 6px #00b2ff;
+  -webkit-box-shadow: 0 0 15px 6px #00b2ff;
+  box-shadow: 0 0 15px 6px #00b2ff;
 }
 
 .card a::before {
@@ -1402,8 +1402,8 @@ ul {
 .popup__close:focus,
 .popup__close:focus-visible {
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 15px 6px #ffffff;
-  box-shadow: 0px 0px 15px 6px #ffffff;
+  -webkit-box-shadow: 0 0 15px 6px #ffffff;
+  box-shadow: 0 0 15px 6px #ffffff;
 }
 
 .popup h4 {
@@ -1521,13 +1521,8 @@ ul {
 .popup__submit:focus,
 .popup__submit:focus-visible {
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 15px 6px #ffffff;
-  box-shadow: 0px 0px 15px 6px #ffffff;
-}
-
-.popup__submit:focus-visible {
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  -webkit-box-shadow: 0 0 15px 6px #ffffff;
+  box-shadow: 0 0 15px 6px #ffffff;
 }
 
 .popup input[type="checkbox"] {
@@ -1589,12 +1584,12 @@ ul {
   box-shadow: none;
 }
 
-.popup__form-input-checkbox label:hover:before,
-.popup__form-input-checkbox label:active:before,
-.popup__form-input-checkbox label:focus:before,
-.popup__form-input-checkbox label:focus-visible:before {
-  -webkit-box-shadow: 0px 0px 15px 6px #ffffff;
-  box-shadow: 0px 0px 15px 6px #ffffff;
+.popup__form-input-checkbox label:hover::before,
+.popup__form-input-checkbox label:active::before,
+.popup__form-input-checkbox label:focus::before,
+.popup__form-input-checkbox label:focus-visible::before {
+  -webkit-box-shadow: 0 0 15px 6px #ffffff;
+  box-shadow: 0 0 15px 6px #ffffff;
 }
 
 .popup__form-input-checkbox--nojs input {
@@ -1780,8 +1775,8 @@ ul {
 .feedback__submit:focus,
 .feedback__submit:focus-visible {
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 15px 6px #ffffff;
-  box-shadow: 0px 0px 15px 6px #ffffff;
+  -webkit-box-shadow: 0 0 15px 6px #ffffff;
+  box-shadow: 0 0 15px 6px #ffffff;
 }
 
 .feedback__form-input-checkbox {
@@ -1836,20 +1831,16 @@ ul {
 .feedback__form-input-checkbox label:focus,
 .feedback__form-input-checkbox label:focus:focus-visible {
   cursor: pointer;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .feedback__form-input-checkbox label:hover::before,
 .feedback__form-input-checkbox label:active::before,
 .feedback__form-input-checkbox label:focus::before,
 .feedback__form-input-checkbox label:focus:focus-visible::before {
-  -webkit-box-shadow: 0px 0px 15px 6px #ffffff;
-  box-shadow: 0px 0px 15px 6px #ffffff;
-}
-
-.feedback__form-input-checkbox input:focus + label {
-  -webkit-box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
-  box-shadow: 0 0 0 2px #011c40, 0 0 0 3px #ffffff;
-  border-radius: 2px;
+  -webkit-box-shadow: 0 0 15px 6px #ffffff;
+  box-shadow: 0 0 15px 6px #ffffff;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -2299,8 +2290,8 @@ ul {
     content: "";
     position: absolute;
     bottom: 0;
-    left: -25px;
-    width: calc(100% + 50px);
+    left: 0;
+    width: 100%;
     height: 1px;
     background-color: rgba(248, 253, 255, 0.7);
   }
@@ -2337,8 +2328,8 @@ ul {
     content: "";
     position: absolute;
     bottom: 0;
-    left: -25px;
-    width: calc(100% + 50px);
+    left: 0;
+    width: 100%;
     height: 1px;
     background-color: rgba(248, 253, 255, 0.7);
   }
