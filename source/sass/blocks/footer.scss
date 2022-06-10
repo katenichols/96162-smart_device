@@ -267,16 +267,9 @@
   width: 95%;
   margin-bottom: 9px;
 
-  // &:nth-of-type(3n) {
-  //   margin-bottom: 6px;
-  // }
 
   @media (max-width: $vp-1023) {
     width: 70%;
-
-    // &:nth-of-type(4n) {
-    //   margin-bottom: 8px;
-    // }
   }
 }
 
